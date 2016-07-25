@@ -15,11 +15,12 @@
 		<hr />
 		
 		<!-- 主体部分，会分为左右两部分，分别为索引与正文   -->
+		<p>服务器当前时间：<%= new java.util.Date() %></p>
 		<p>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</p>
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>
         <script src="js/roller.js"></script>
-        <%= new java.util.Date() %>
+        
 	</body>
 	
 	
