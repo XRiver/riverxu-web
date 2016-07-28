@@ -19,7 +19,7 @@
   
   <servlet-mapping>
     <servlet-name>First</servlet-name>
-    <url-pattern>/api/first</url-pattern>
+    <url-pattern>/api/first.do</url-pattern>
   </servlet-mapping>
   
 </web-app>
