@@ -1,11 +1,10 @@
 package cn.riverxu;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,7 +40,13 @@ public class FirstTestServlet extends HttpServlet {
 		NameExpertOfDiscrimination expert = new NameExpertOfDiscrimination();
 		String result = expert.getAnswer(name);
 		
-		request.getSession().setAttribute("answer", result);
+		request.setAttribute("answer", result);
+		
+		File f = new File("C:/a.txt");
+		f.createNewFile();
+		FileWriter fw = new FileWriter(f);
+		fw.write(result);
+		fw.close();
 		
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
 		dispatcher.forward(request, response);
