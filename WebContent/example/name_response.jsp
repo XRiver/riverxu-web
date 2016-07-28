@@ -8,8 +8,10 @@
 </head>
 <body>
 	<p>
-	<% String answer = request.getParameter("answer");
-		out.print(answer);
+	<%   String name = request.getParameter("name");
+		 String answer = request.getParameter("answer");
+		 out.print("Your name is "+name+".<br>");
+		out.print("The analysis is "+answer+".<br>");
 	%>
 	</p>
 </body>
