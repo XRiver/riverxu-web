@@ -11,7 +11,13 @@
 	<%   String name = request.getParameter("name");
 		 String answer = request.getParameter("answer");
 		 out.print("Your name is "+name+".<br>");
-		out.print("The analysis is "+answer+".<br>");
+		 if (answer == null) {
+		 	out.print("Cannot get a answer.<br>");
+		 } else {
+		 	out.print("The analysis is "+answer+".<br>");
+		 }
+
+		
 	%>
 	</p>
 </body>

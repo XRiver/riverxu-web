@@ -41,7 +41,7 @@ public class FirstTestServlet extends HttpServlet {
 		NameExpertOfDiscrimination expert = new NameExpertOfDiscrimination();
 		String result = expert.getAnswer(name);
 		
-		request.setAttribute("answer", result);
+		request.getSession().setAttribute("answer", result);
 		
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
 		dispatcher.forward(request, response);
