@@ -43,6 +43,12 @@ public class FirstTestServlet extends HttpServlet {
 		
 		request.setAttribute("answer", result);
 		
+		/*
+		 * Debug: if result is null, new JSP will not show.
+		 */
+		if (result == null) return;
+		else request.setAttribute("name", name+result);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/example/name_response.jsp");
 		dispatcher.forward(request, response);
 	}
