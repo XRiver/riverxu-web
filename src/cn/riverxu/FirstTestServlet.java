@@ -42,12 +42,6 @@ public class FirstTestServlet extends HttpServlet {
 		
 		request.setAttribute("answer", result);
 		
-		File f = new File("C:/a.txt");
-		f.createNewFile();
-		FileWriter fw = new FileWriter(f);
-		fw.write(result);
-		fw.close();
-		
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
 		dispatcher.forward(request, response);
 	}

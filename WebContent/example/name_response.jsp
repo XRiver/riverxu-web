@@ -9,7 +9,7 @@
 <body>
 	<p>
 	<%   String name = request.getParameter("name");
-		 String answer = request.getParameter("answer");
+		 String answer = (String) request.getAttribute("answer");
 		 out.print("Your name is "+name+".<br>");
 		 if (answer == null) {
 		 	out.print("Cannot get a answer.<br>");
