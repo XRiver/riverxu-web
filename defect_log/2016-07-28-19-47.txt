@@ -1,6 +1,6 @@
 Defect: Chinese characters turn out to be in error encoding with the encoding of everywhere(?--browser, servlet, JSP page) set to UTF-8.
-Type: 
+Type: Function
 Possible reason: 1. The encoding in servlet class isn't UTF-8, beccause the analyzed information was wrong.
-Reason: Unknown
-Fix time: 
-Fix method:
+Reason: 1
+Fix time: 2016-07-30-00-23
+Fix method: Specified character encoding at HttpServletRequest.(setCharacterEncoding("utf-8")) 
