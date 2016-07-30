@@ -57,17 +57,17 @@ public class FirstTestServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		} else {
 			response.setContentType("text/plain");
+			response.setCharacterEncoding("utf-8");
+			
 			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
 			FileWriter fw = new FileWriter(f);
+			
 			fw.write(result);
 			fw.close();
 			
 			Logger.log("File created "+f.getAbsolutePath());
 			
 			InputStream is = new FileInputStream(f);
-			if (is == null) {
-				is = getServletContext().getResourceAsStream("/resource/error.txt");
-			}
 			int read = 0;
 			byte[] buf = new byte[1024];
 			OutputStream os = response.getOutputStream();
@@ -76,6 +76,10 @@ public class FirstTestServlet extends HttpServlet {
 			}
 			is.close();
 			os.close();
+			
+			response.addHeader("Content-Disposition", "attachment;filename=result.txt");
+			response.addIntHeader("Content-Length", (int) f.getTotalSpace());
+			
 		}
 		
 		
