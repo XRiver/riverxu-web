@@ -1,7 +1,12 @@
 Defect: ServletContext.getResourceAsStream() cannot retrieve File created by File.createTempFile()
-Type:
+Type: Function
 Possible reason: 1. Wrong way of creating File
     2. Wrong way of specifying resource(f.getAbsolutePath()?)
-Reason: 
-Fix time:
-Fix method: 
+Reason: 1 ; Not specifying character encoding when writing into file; Not setting content-type to binary flow(otherwise Chrome would cache and open it in itself)
+Fix time: 2016-07-30-20-30
+Fix method: OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(f),"UTF-8");
+    ...
+    response.setContentType("application/octet-stream");
+	response.setCharacterEncoding("utf-8");
+	response.addHeader("Content-Disposition", "attachment; filename=result.txt");
+

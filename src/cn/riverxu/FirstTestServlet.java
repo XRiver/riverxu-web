@@ -67,8 +67,6 @@ public class FirstTestServlet extends HttpServlet {
 			out.write(result);
 			out.close();
 			
-			Logger.log("File created "+f.getAbsolutePath());
-			
 			InputStream is = new FileInputStream(f);
 			
 			int read = 0;
