@@ -56,7 +56,7 @@ public class FirstTestServlet extends HttpServlet {
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
 			dispatcher.forward(request, response);
 		} else {
-			response.setContentType("text/plain");
+			response.setContentType("application/octet-stream");
 			response.setCharacterEncoding("utf-8");
 			
 			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
@@ -68,6 +68,7 @@ public class FirstTestServlet extends HttpServlet {
 			Logger.log("File created "+f.getAbsolutePath());
 			
 			InputStream is = new FileInputStream(f);
+			
 			int read = 0;
 			byte[] buf = new byte[1024];
 			OutputStream os = response.getOutputStream();
