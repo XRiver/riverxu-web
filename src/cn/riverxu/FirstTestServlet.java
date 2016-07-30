@@ -56,7 +56,7 @@ public class FirstTestServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		} else {
 			response.setContentType("application/octet-stream");
-			
+			Logger.log("Trying to create at "+System.getProperty("user.dir")+"WebContent/WEB-INF/temp");
 			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt", new File(System.getProperty("user.dir")+"/WEB-INF/temp"));
 			FileWriter fw = new FileWriter(f);
 			fw.write(result);
