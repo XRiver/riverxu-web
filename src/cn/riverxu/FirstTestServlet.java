@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.eclipse.jdt.internal.compiler.batch.Main;
+
 import cn.riverxu.helper.Logger;
 
 /**
@@ -55,7 +57,7 @@ public class FirstTestServlet extends HttpServlet {
 		} else {
 			response.setContentType("application/octet-stream");
 			
-			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt", new File("/WEB-INF/temp"));
+			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt", new File(System.getProperty("user.dir")+"/WEB-INF/temp"));
 			FileWriter fw = new FileWriter(f);
 			fw.write(result);
 			fw.close();
