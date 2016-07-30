@@ -59,6 +59,9 @@ public class FirstTestServlet extends HttpServlet {
 			fw.close();
 			
 			InputStream is = getServletContext().getResourceAsStream(f.getAbsolutePath());
+			if (is == null) {
+				is = getServletContext().getResourceAsStream("/resource/error.txt");
+			}
 			int read = 0;
 			byte[] buf = new byte[1024];
 			OutputStream os = response.getOutputStream();
