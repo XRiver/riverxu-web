@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cn.riverxu.helper.Logger;
+
 /**
  * Servlet implementation class FirstTestServlet
  */
@@ -51,12 +53,14 @@ public class FirstTestServlet extends HttpServlet {
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
 			dispatcher.forward(request, response);
 		} else {
-			response.setContentType("text/plain");
+			response.setContentType("application/octet-stream");
 			
 			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
 			FileWriter fw = new FileWriter(f);
 			fw.write(result);
 			fw.close();
+			
+			Logger.log("File created "+f.getAbsolutePath());
 			
 			InputStream is = getServletContext().getResourceAsStream(f.getAbsolutePath());
 			if (is == null) {
