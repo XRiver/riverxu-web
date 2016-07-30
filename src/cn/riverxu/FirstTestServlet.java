@@ -55,14 +55,14 @@ public class FirstTestServlet extends HttpServlet {
 		} else {
 			response.setContentType("application/octet-stream");
 			
-			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
+			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt", new File("/WEB-INF/temp"));
 			FileWriter fw = new FileWriter(f);
 			fw.write(result);
 			fw.close();
 			
 			Logger.log("File created "+f.getAbsolutePath());
 			
-			InputStream is = getServletContext().getResourceAsStream(f.getAbsolutePath());
+			InputStream is = getServletContext().getResourceAsStream(f.getCanonicalPath());
 			if (is == null) {
 				is = getServletContext().getResourceAsStream("/resource/error.txt");
 			}
