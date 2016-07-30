@@ -2,10 +2,12 @@ package cn.riverxu;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -58,12 +60,12 @@ public class FirstTestServlet extends HttpServlet {
 		} else {
 			response.setContentType("application/octet-stream");
 			response.setCharacterEncoding("utf-8");
-			
+			response.addHeader("Content-Disposition", "attachment; filename=result.txt");
+
 			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
-			FileWriter fw = new FileWriter(f);
-			
-			fw.write(result);
-			fw.close();
+			OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream(f),"UTF-8");
+			out.write(result);
+			out.close();
 			
 			Logger.log("File created "+f.getAbsolutePath());
 			
@@ -77,9 +79,6 @@ public class FirstTestServlet extends HttpServlet {
 			}
 			is.close();
 			os.close();
-			
-			response.addHeader("Content-Disposition", "attachment;filename=result.txt");
-			response.addIntHeader("Content-Length", (int) f.getTotalSpace());
 			
 		}
 		
