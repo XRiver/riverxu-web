@@ -1,0 +1,7 @@
+Defect: ServletContext.getResourceAsStream() cannot retrieve File created by File.createTempFile()
+Type:
+Possible reason: 1. Wrong way of creating File
+    2. Wrong way of specifying resource(f.getAbsolutePath()?)
+Reason: 
+Fix time:
+Fix method: 

@@ -53,7 +53,7 @@ public class FirstTestServlet extends HttpServlet {
 		} else {
 			response.setContentType("text/plain");
 			
-			File f = File.createTempFile("result", "txt");
+			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
 			FileWriter fw = new FileWriter(f);
 			fw.write(result);
 			fw.close();
