@@ -1,6 +1,7 @@
 package cn.riverxu;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -55,16 +56,15 @@ public class FirstTestServlet extends HttpServlet {
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
 			dispatcher.forward(request, response);
 		} else {
-			response.setContentType("application/octet-stream");
-			Logger.log("Trying to create at "+System.getProperty("user.dir")+"WebContent/WEB-INF/temp");
-			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt", new File(System.getProperty("user.dir")+"/WEB-INF/temp"));
+			response.setContentType("text/plain");
+			File f = File.createTempFile("result"+System.currentTimeMillis(), ".txt");
 			FileWriter fw = new FileWriter(f);
 			fw.write(result);
 			fw.close();
 			
 			Logger.log("File created "+f.getAbsolutePath());
 			
-			InputStream is = getServletContext().getResourceAsStream(f.getCanonicalPath());
+			InputStream is = new FileInputStream(f);
 			if (is == null) {
 				is = getServletContext().getResourceAsStream("/resource/error.txt");
 			}
