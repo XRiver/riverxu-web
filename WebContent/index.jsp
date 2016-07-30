@@ -20,9 +20,11 @@
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>
         <script src="js/roller.js"></script>
-        <form action="/api/first.do" method="POST">
+        <form id="nameAnalysisForm" action="/api/first.do" method="POST">
         	<p>你的名字是？<input type="text" name="name" /></p>
-        	<input type="submit" value="提交" />
+        	<input type="hidden" name="action" value="none" /> 
+        	<input type="button" value="提交" onclick="nameAnalysis('submit')" />
+        	<input type="button" value="Download as file" onclick="nameAnalysis('download')" />
         </form>
         
 	</body>
