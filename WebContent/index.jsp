@@ -15,6 +15,19 @@
 		<hr />
 		
 		<!-- 主体部分，会分为左右两部分，分别为索引与正文   -->
+		<p>
+		<% javax.servlet.http.Cookie[] cookies = request.getCookies();
+			for (javax.servlet.http.Cookie c : cookies) {
+				if (c.getName().equals("is_admin")) {
+					if (c.getValue().equals("true")) {
+						out.println("Welcome, admin!");
+					} else {
+						out.println("You are visiting as a guest.");
+					}
+				}
+			}
+		 %>
+			</p>
 		<p>服务器启动时间：<%= application.getAttribute("init-date") %></p>
 		<p>服务器当前时间：<%= new java.util.Date() %></p>
 		<p>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</p>

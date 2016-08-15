@@ -3,7 +3,6 @@ package cn.riverxu;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -11,13 +10,10 @@ import java.io.OutputStreamWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.eclipse.jdt.internal.compiler.batch.Main;
-
-import cn.riverxu.helper.Logger;
 
 /**
  * Servlet implementation class FirstTestServlet
@@ -53,6 +49,21 @@ public class FirstTestServlet extends HttpServlet {
 		NameExpertOfDiscrimination expert = new NameExpertOfDiscrimination();
 		String result = expert.getAnswer(name);
 		
+		Cookie[] cookies = request.getCookies();
+		boolean cookieFilled = false;
+		for (Cookie c : cookies) {
+			if (c.getName().equals("is_admin")) {
+				cookieFilled = true;
+			}
+		}
+		if (!cookieFilled) {
+			if (name.equals("徐江河")) {
+				response.addCookie(new Cookie("is_admin","true"));
+			} else {
+				response.addCookie(new Cookie("is_admin","false"));
+			}		
+		}
+		
 		if (action.equals("submit")) {
 			request.setAttribute("answer", result);
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/example/name_response.jsp");
@@ -79,7 +90,6 @@ public class FirstTestServlet extends HttpServlet {
 			os.close();
 			
 		}
-		
 		
 	}
 
