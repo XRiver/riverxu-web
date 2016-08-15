@@ -1,0 +1,7 @@
+Defect: Cookie("is_admin","true") cannot be found on index.jsp but avaliable in name_response.jsp
+Type: Function
+Possible reason: 1. Wrong path for cookie(/api instead of /)
+    2. Wrong max age for cookie
+Reason: 
+Fix time: 
+Fix method: 

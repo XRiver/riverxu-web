@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,6 +18,7 @@
 		<p>
 		<% javax.servlet.http.Cookie[] cookies = request.getCookies();
 			for (javax.servlet.http.Cookie c : cookies) {
+				out.println(c.getName()+':'+c.getValue());
 				if (c.getName().equals("is_admin")) {
 					if (c.getValue().equals("true")) {
 						out.println("Welcome, admin!");
@@ -29,7 +30,7 @@
 		 %>
 			</p>
 		<p>服务器启动时间：<%= application.getAttribute("init-date") %></p>
-		<p>服务器当前时间：<%= new java.util.Date() %></p>
+		<p>服务器当前时间：<%= new Date() %></p>
 		<p>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</p>
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>

@@ -1,0 +1,6 @@
+Defect: Invoking of NullPointerException when visiting index.jsp occasionally
+Type: 
+Possible reason: 1. Lack of "is_admin" cookie
+Reason: 
+Fix time: 
+Fix method: 
