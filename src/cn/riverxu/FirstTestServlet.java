@@ -57,10 +57,15 @@ public class FirstTestServlet extends HttpServlet {
 			}
 		}
 		if (!cookieFilled) {
+			Cookie c = null;
 			if (name.equals("徐江河")) {
-				response.addCookie(new Cookie("is_admin","true"));
+				c = new Cookie("is_admin","true");
+				c.setPath("/");
+				response.addCookie(c);
 			} else {
-				response.addCookie(new Cookie("is_admin","false"));
+				c = new Cookie("is_admin","false");
+				c.setPath("/");
+				response.addCookie(c);
 			}		
 		}
 		
