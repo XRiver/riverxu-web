@@ -43,7 +43,9 @@
 <?php 
     if (!empty($_POST["name"])) {
         $name = $_POST["name"];
-        $result = $name[0]=='徐'?"你是徐家人":"你不是徐家人";
+		$family_name = $name[0];
+		echo "你的姓氏为".$family_name;
+        $result = $family_name=='徐'?"你是徐家人":"你不是徐家人";
         if ($_POST["action"]=="submit") {
             echo @"生成结果:
             ".$result;
