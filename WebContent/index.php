@@ -21,7 +21,7 @@
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>
         <script src="js/roller.js"></script>
-        <form id="nameAnalysisForm" action="" method="POST">
+        <form accept-charset="utf-8" id="nameAnalysisForm" action="" method="POST">
         	<p>你的名字是？<input type="text" name="name" /></p>
         	<input type="hidden" name="action" value="none" /> 
         	<input type="button" value="提交" onclick="nameAnalysis('submit')" />
