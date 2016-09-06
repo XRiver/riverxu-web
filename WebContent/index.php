@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<?php
-			header("Content-Type:text/html; charset=utf-8");
+			header("Content-Type:text/html");
+			header("Charset=utf-8");
 		?>
 		<title>RiverXu个人主页</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css" />
