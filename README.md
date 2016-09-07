@@ -11,7 +11,7 @@ This website is a personal website, which mainly acts as a blog but may provide 
 <br />
 使用语言  Developing languages
 ------------------
-HTML, JavaScript, JSP
+HTML, PHP
 <br />
 层次结构  Hierarchy
 ------------------

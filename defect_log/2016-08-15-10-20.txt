@@ -2,6 +2,6 @@ Defect: Cookie("is_admin","true") cannot be found on index.jsp but avaliable in 
 Type: Function
 Possible reason: 1. Wrong path for cookie(/api instead of /)
     2. Wrong max age for cookie
-Reason: 
-Fix time: 
-Fix method: 
+Reason: UNKNOWN
+Fix time: UNKNOWN
+Fix method: With the programming language switched to PHP and server switched to standard Apache, the feature was temporarily removed, thus this defect is gone.

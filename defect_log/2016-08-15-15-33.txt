@@ -1,6 +1,6 @@
 Defect: Invoking of NullPointerException when visiting index.jsp occasionally
-Type: 
+Type: //
 Possible reason: 1. Lack of "is_admin" cookie
-Reason: 
-Fix time: 
-Fix method: 
+Reason: UNKNOWN
+Fix time: UNKNOWN
+Fix method: With the programming language switched to PHP and server switched to standard Apache, the feature was temporarily removed, thus this defect is gone.

@@ -47,9 +47,9 @@
 <?php 
     if (!empty($_POST["name"])) {
         $name = $_POST["name"];
-		$family_name = $name[0].$name[1].$name[2];
+		$family_name = $name[0].$name[1].$name[2];	//每个汉字经过url编码变成3bytes，暂时没有解码方法
 		echo "你的姓氏为".$family_name;
-		echo "输入长度为".strlen($name);
+		echo "输入长度（PHP中的字节数）为".strlen($name);
 		echo "输入内容为".$name;
         $result = $family_name=='徐'?"你是徐家人":"你不是徐家人";
         if ($_POST["action"]=="submit") {
