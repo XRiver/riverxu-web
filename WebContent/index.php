@@ -49,6 +49,8 @@
         $name = $_POST["name"];
 		$family_name = $name[0];
 		echo "你的姓氏为".$family_name;
+		echo "输入长度为".strlen($name);
+		echo "输入内容为".$name;
         $result = $family_name=='徐'?"你是徐家人":"你不是徐家人";
         if ($_POST["action"]=="submit") {
             echo @"生成结果:
