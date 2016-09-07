@@ -44,19 +44,17 @@
 	</footer>
 </html>
 
-<?php
+
+<?php 
+
 	function br() {
 		echo "<br>";
 	}
 
-	if (!(function_exists('str_starts_with')) {
-  		function str_starts_with($haystack, $needle) {
-    		return substr($haystack, 0, strlen($needle)) === $needle;
-  		}
-	}
-?>
+	function str_starts_with($haystack, $needle) {
+    	return substr($haystack, 0, strlen($needle)) === $needle;
+  	}
 
-<?php 
     if (!empty($_POST["name"])) {
         $name = $_POST["name"];
 		$family_name = $name[0].$name[1].$name[2];
