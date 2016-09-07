@@ -3,5 +3,5 @@ Type: Function
 Possible reason: //
 Reason: Browser encode Chinese content in URL(each character in %ab%cd%ef, taking 3 bytes' storage), but in PHP each byte stands for a character.
     "徐江河" takes 9 bytes, so $POST["name"][0] is not 徐.
-Fix time: Unsolved
-Fix method: ..
+Fix time: 2016-09-07-20-02 (Unsolved, but avoided)
+Fix method: In PHP, each Chinese character takes 3 bytes(UTF8), and we cannot make strlen("徐江河")==3. It has to be 9!
