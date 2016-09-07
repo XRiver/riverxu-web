@@ -46,7 +46,7 @@
 
 <?php 
     if (!empty($_POST["name"])) {
-        $name = mb_convert_encoding($_POST["name"],"utf-8");
+        $name = rawurldecode($_POST["name"]);
 		$family_name = $name[0];
 		echo "你的姓氏为".$family_name;
 		echo "输入长度为".strlen($name);
