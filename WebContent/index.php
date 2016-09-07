@@ -45,9 +45,13 @@
 </html>
 
 <?php
+	function br() {
+		echo "<br>";
+	}
+
 	if (!(function_exists('str_starts_with')) {
   		function str_starts_with($haystack, $needle) {
-    		return substr($haystack, 0, strlen($needle)) === $haystack;
+    		return substr($haystack, 0, strlen($needle)) === $needle;
   		}
 	}
 ?>
@@ -55,7 +59,7 @@
 <?php 
     if (!empty($_POST["name"])) {
         $name = $_POST["name"];
-		$family_name = $name[0].$name[1].$name[2];	//每个汉字经过url编码变成3bytes，暂时没有解码方法
+		$family_name = $name[0].$name[1].$name[2];
 		echo "你的姓氏为".$family_name;
 		br();
 		echo "输入长度（PHP中的字节数）为".strlen($name);
@@ -73,9 +77,5 @@
     } else {
         echo "未检测到输入。";
     }
-
-	function br() {
-		echo "<br>";
-	}
 ?>
     
