@@ -55,6 +55,8 @@
     	return substr($haystack, 0, strlen($needle)) === $needle;
   	}
 
+	  session_start();
+
     if (!empty($_POST["name"])) {
         $name = $_POST["name"];
 		$family_name = $name[0].$name[1].$name[2];
@@ -70,7 +72,10 @@
         if ($_POST["action"]=="submit") {
             echo "生成结果:".$result;
         } else {
-            echo "现在暂时不支持下载文件，而".$result;
+			$_SESSION["analysis"] = $result;
+			//include("/file_return.php");
+			//exit;
+			echo "目前暂不支持文件下载，而".$result;
         }
     } else {
         echo "未检测到输入。";
