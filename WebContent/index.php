@@ -46,17 +46,16 @@
 
 <?php 
     if (!empty($_POST["name"])) {
-        $name = rawurldecode($_POST["name"]);
-		$family_name = $name[0];
+        $name = $_POST["name"];
+		$family_name = $name[0].$name[1].$name[2];
 		echo "你的姓氏为".$family_name;
 		echo "输入长度为".strlen($name);
 		echo "输入内容为".$name;
         $result = $family_name=='徐'?"你是徐家人":"你不是徐家人";
         if ($_POST["action"]=="submit") {
-            echo @"生成结果:
-            ".$result;
+            echo "生成结果:".$result;
         } else {
-            echo @"现在暂时不支持下载文件，而".$result;
+            echo "现在暂时不支持下载文件，而".$result;
         }
     } else {
         echo "未检测到输入。";
