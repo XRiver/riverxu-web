@@ -33,7 +33,7 @@
 			<input id="action" type="hidden" value="false" />
 			<input type="button" value="tryRedirect" onclick="tryRedirect()" />
 		</form>
-        
+        <audio src="resource/music/我が栄光.mp3" controls>Your browser dosen't support audio label</audio>
 	
 
 	<?php 
@@ -74,15 +74,19 @@
     }
 ?>
 
-	</body>
+	
 	<!-- 备案信息 -->
-	<hr />
+	<hr>
 	<footer>
 		<p>网站备案号：<a href="http://www.miitbeian.gov.cn/">鲁ICP备16026714号</a></p>
 		<p>联系我:
 			<a href="mailto:sdxujianghe@126.com">
 				<img alt="e-mail" src="img/e-mail.png" border="0" width="32" height="32" />
 			</a>
+			<br>
+			<small><s>没有什么最终解释权归属问题。</s></small>
 		</p>
 	</footer>
+
+	</body>
 </html>
