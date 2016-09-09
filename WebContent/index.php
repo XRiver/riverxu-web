@@ -73,9 +73,8 @@
             echo "生成结果:".$result;
         } else {
 			$_SESSION["analysis"] = $result;
-			//include("/file_return.php");
-			//exit;
-			echo "目前暂不支持文件下载，而".$result;
+			include("/test/file_return.php");
+			exit;
         }
     } else {
         echo "未检测到输入。";
