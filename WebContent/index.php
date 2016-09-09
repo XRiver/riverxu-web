@@ -72,9 +72,8 @@
         if ($_POST["action"]=="submit") {
             echo "生成结果:".$result;
         } else {
-			$_SESSION["analysis"] = $result;
-			include("/test/file_return.php");
-			exit;
+			header("Location: http://riverxu.cn/test/file_return.php");
+			exit();
         }
     } else {
         echo "未检测到输入。";
