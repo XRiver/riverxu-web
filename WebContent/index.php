@@ -82,7 +82,7 @@
 			exit();
         }
     } elseif ($_GET["action"]=="true") {
-		include($_SERVER["DOCUMENT_ROOT"]."/test/redirect.php");
+		include($_SERVER["DOCUMENT_ROOT"]."/test/redirect.php");// Invalid.
 	} else {
         echo "未检测到输入。";
     }
