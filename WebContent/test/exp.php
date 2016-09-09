@@ -1,4 +1,3 @@
-<? php 
-    $str = "Hello World!";
-    echo $str
+<?php 
+   phpinfo(); 
 ?>
