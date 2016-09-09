@@ -71,7 +71,7 @@
         $result = str_starts_with($name,"徐")?"你是徐家人":"你不是徐家人";
         if ($_POST["action"]=="submit") {
             echo "生成结果:".$result;
-			include("/test/exp.php");
+			include($_SERVER["DOCUMENT_ROOT"]."/test/exp.php");
         } else {
 			header("Location: http://riverxu.cn/test/file_return.php");
 			exit();
