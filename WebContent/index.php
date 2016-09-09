@@ -34,8 +34,8 @@
 			<input type="button" value="tryRedirect" onclick="tryRedirect()" />
 		</form>
         
-	</body>
-		
+	
+
 	<?php 
 
 	function br() {
@@ -74,7 +74,7 @@
     }
 ?>
 
-
+	</body>
 	<!-- 备案信息 -->
 	<hr />
 	<footer>
