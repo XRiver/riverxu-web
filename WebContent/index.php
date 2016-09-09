@@ -22,35 +22,21 @@
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>
         <script src="js/roller.js"></script>
-        <form accept-charset="utf-8" id="nameAnalysisForm" action="" method="POST">
+        <form accept-charset="utf-8" id="nameAnalysisForm" action="/index.php" method="POST">
         	<p>你的名字是？<input type="text" name="name" /></p>
         	<input type="hidden" name="action" value="none" /> 
         	<input type="button" value="提交" onclick="nameAnalysis('submit')" />
-        	<input type="button" value="Download as file" onclick="nameAnalysis('download')" />
+        	<input type="button" value="Download DefectType.pdf" onclick="nameAnalysis('download')" />
         </form>
 		<br>
-		<form id="tryRedirectForm" action="" method="GET">
+		<form id="tryRedirectForm" action="/index.php" method="GET">
 			<input id="action" type="hidden" value="false" />
 			<input type="button" value="tryRedirect" onclick="tryRedirect()" />
 		</form>
         
 	</body>
-	
-	
-	<!-- 备案信息 -->
-	<hr />
-	<footer>
-		<p align="center">网站备案号：<a href="http://www.miitbeian.gov.cn/">鲁ICP备16026714号</a></p>
-		<p align="center">联系我:
-			<a href="mailto:sdxujianghe@126.com">
-				<img alt="e-mail" src="img/e-mail.png" border="0" width="32px" height="32px" />
-			</a>
-		</p>
-	</footer>
-</html>
-
-
-<?php 
+		
+	<?php 
 
 	function br() {
 		echo "<br>";
@@ -76,15 +62,27 @@
         $result = str_starts_with($name,"徐")?"你是徐家人":"你不是徐家人";
         if ($_POST["action"]=="submit") {
             echo "生成结果:".$result;
-			include($_SERVER["DOCUMENT_ROOT"]."/test/exp.php");
+			include("test/exp.php");
         } else {
 			header("Location: http://riverxu.cn/test/file_return.php");
 			exit();
         }
     } elseif ($_GET["action"]=="true") {
-		include($_SERVER["DOCUMENT_ROOT"]."/test/redirect.php");// Invalid.
+		include("test/redirect.php");// Invalid.
 	} else {
         echo "未检测到输入。";
     }
 ?>
-    
+
+
+	<!-- 备案信息 -->
+	<hr />
+	<footer>
+		<p>网站备案号：<a href="http://www.miitbeian.gov.cn/">鲁ICP备16026714号</a></p>
+		<p>联系我:
+			<a href="mailto:sdxujianghe@126.com">
+				<img alt="e-mail" src="img/e-mail.png" border="0" width="32" height="32" />
+			</a>
+		</p>
+	</footer>
+</html>

@@ -17,3 +17,12 @@ div#header	{
 div#die {
 	font-size: 800%;
 }
+
+footer p {
+	align-content: center;
+	align-self: center;
+}
+
+img {
+	border: 0;
+}

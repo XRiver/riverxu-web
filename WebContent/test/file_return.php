@@ -6,5 +6,5 @@ header('Content-Type: application/pdf');
 header('Content-Disposition: attachment; filename="DefectTypes.pdf"');
 
 // The PDF source is in original.pdf
-readfile($_SERVER["DOCUMENT_ROOT"].'/resource/DefectTypes.pdf');
+readfile('resource/DefectTypes.pdf');
 ?>
