@@ -28,6 +28,11 @@
         	<input type="button" value="提交" onclick="nameAnalysis('submit')" />
         	<input type="button" value="Download as file" onclick="nameAnalysis('download')" />
         </form>
+		<br>
+		<form id="tryRedirectForm" action="" method="GET">
+			<input id="action" type="hidden" value="false" />
+			<input type="button" value="tryRedirect" onclick="tryRedirect()" />
+		</form>
         
 	</body>
 	
@@ -76,7 +81,9 @@
 			header("Location: http://riverxu.cn/test/file_return.php");
 			exit();
         }
-    } else {
+    } elseif ($_GET["action"]=="true") {
+		include($_SERVER["DOCUMENT_ROOT"]."/test/redirect.php");
+	} else {
         echo "未检测到输入。";
     }
 ?>
