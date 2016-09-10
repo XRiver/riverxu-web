@@ -10,15 +10,32 @@
 	</head>
 	
 	<body>
-		<div id="header">
+		<header>
 			<h1>RiverXu个人主页<sub>暂时仅为博客</sub></h1>
-		</div>	
-		<!-- 此处应有导航栏 -->
+		</header>	
 		<hr />
 		
 		<!-- 主体部分，会分为左右两部分，分别为索引与正文   -->
-		
-		<p>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</p>
+		<aside class="NavSideBar"><!--索引-->
+			<nav>
+				<h2>内容丰富的列表</h2>
+				<ul>
+					<li>条目一</li>
+					<li>条目二</li>
+					<li>条目三</li>
+				</ul>
+				<h2>又一个内容丰富的列表</h2>
+				<ul>
+					<li>如法炮制的条目一</li>
+					<li>如法炮制的条目二</li>
+					<li>如法炮制的条目三</li>
+				</ul>
+			</nav>
+		</aside>
+
+
+		<article><!-- 正文 -->
+		<h2>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</h2>
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>
         <script src="js/roller.js"></script>
@@ -72,9 +89,9 @@
 	} else {
         echo "未检测到输入。";
     }
-?>
 
-	
+	?>
+		</article>
 	<!-- 备案信息 -->
 	<hr>
 	<footer>
