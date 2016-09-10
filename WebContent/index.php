@@ -33,8 +33,8 @@
 			</nav>
 		</aside>
 
-
-		<article><!-- 正文 -->
+		<main>
+		<article class="Content"><!-- 正文 -->
 		<h2>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</h2>
 		<div><input id="roller" type="button" value="Roll" /></div>
         <div id="die"></div>
@@ -92,6 +92,7 @@
 
 	?>
 		</article>
+		</main>
 	<!-- 备案信息 -->
 	<hr>
 	<footer>
