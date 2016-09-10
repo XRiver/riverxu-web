@@ -17,14 +17,15 @@
 		
 		<!-- 主体部分，会分为左右两部分，分别为索引与正文   -->
 		<aside class="NavSideBar"><!--索引-->
+			<h2>没有用的索引</h2>
 			<nav>
-				<h2>内容丰富的列表</h2>
+				<h3>内容丰富的列表</h3>
 				<ul>
 					<li>条目一</li>
 					<li>条目二</li>
 					<li>条目三</li>
 				</ul>
-				<h2>又一个内容丰富的列表</h2>
+				<h3>又一个内容丰富的列表</h3>
 				<ul>
 					<li>如法炮制的条目一</li>
 					<li>如法炮制的条目二</li>
@@ -35,8 +36,8 @@
 
 		<main>
 		<article class="Content"><!-- 正文 -->
-		<h2>网站功能正在开发中，没事可以点点下面的按钮，检测血统。</h2>
-		<div><input id="roller" type="button" value="Roll" /></div>
+		<h2>正文：网站功能正在开发中，没事可以点点下面的按钮，检测血统。</h2>
+		<input id="roller" type="button" value="Roll" onclick="rollDie()" />
         <div id="die"></div>
         <script src="js/roller.js"></script>
         <form accept-charset="utf-8" id="nameAnalysisForm" action="/index.php" method="POST">
@@ -50,7 +51,7 @@
 			<input id="action" type="hidden" value="false" />
 			<input type="button" value="tryRedirect" onclick="tryRedirect()" />
 		</form>
-        <audio src="resource/music/我が栄光.mp3" controls>Your browser dosen't support audio label</audio>
+        <audio src="resource/music/我が栄光.mp3" preload="meta" controls>Your browser dosen't support audio label</audio>
 	
 
 	<?php 
@@ -98,9 +99,7 @@
 	<footer>
 		<p>网站备案号：<a href="http://www.miitbeian.gov.cn/">鲁ICP备16026714号</a></p>
 		<p>联系我:
-			<a href="mailto:sdxujianghe@126.com">
-				<img alt="e-mail" src="img/e-mail.png" border="0" width="32" height="32" />
-			</a>
+			<img onclick="sendEmail()" alt="e-mail" src="img/e-mail.png" border="0" width="32" height="32" />
 			<br>
 			<small><s>没有什么最终解释权归属问题。</s></small>
 		</p>
