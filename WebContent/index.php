@@ -2,8 +2,7 @@
 <html>
 	<head>
 		<?php
-			header("Content-Type:text/html");
-			header("Charset=utf-8");
+			header("Content-type: text/html; charset=utf-8");
 		?>
 		<title>RiverXu个人主页</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css" />
@@ -40,7 +39,7 @@
 		<input id="roller" type="button" value="Roll" onclick="rollDie()" />
         <div id="die"></div>
         <script src="js/roller.js"></script>
-        <form accept-charset="utf-8" id="nameAnalysisForm" action="/index.php" method="POST">
+        <form id="nameAnalysisForm" action="/index.php" method="POST">
         	<p>你的名字是？<input type="text" name="name" /></p>
         	<input type="hidden" name="action" value="none" /> 
         	<input type="button" value="提交" onclick="nameAnalysis('submit')" />
