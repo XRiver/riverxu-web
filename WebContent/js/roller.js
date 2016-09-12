@@ -27,7 +27,7 @@ function nameAnalysis(action) {
 
 	xmlHttp = GetXmlHttpObject();
 	xmlHttp.onreadystatechange = updateNameInfo;
-	xmlHttp.open("POST","name_response.asp",true);
+	xmlHttp.open("POST","name_response.php",true);
 	xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xmlHttp.send("action="+action);
 
