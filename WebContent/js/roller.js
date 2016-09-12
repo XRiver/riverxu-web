@@ -48,7 +48,7 @@ function rollDie() {
 }
 
 function updateNameInfo() {
-	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+	if (xmlHttp.readyState==4 && xmlHttp.status==200) {
 		document.getElementById("name_response").innerHTML = xmlHttp.responseText;
 	}
 
