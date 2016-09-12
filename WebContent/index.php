@@ -41,8 +41,7 @@
 		<input id="roller" type="button" value="Roll" onclick="rollDie()" />
         <div id="die"></div>
         <form id="nameAnalysisForm" action="/index.php" method="POST">
-        	<p>你的名字是？<input type="text" name="name" /></p>
-        	<input type="hidden" name="action" value="none" /> 
+        	<p>你的名字是？<input type="text" name="name" id="nameInputArea" /></p>
         	<input type="button" value="提交" onclick="nameAnalysis('submit')" />
         	<input type="button" value="Download DefectType.pdf" onclick="nameAnalysis('download')" />
         </form>

@@ -1,4 +1,4 @@
-function GetXmlHttpObject() { //暂时先把函数搬过来，之后再尝试import
+function GetXmlHttpObject() { //Simply copy the function, try "import" feature later.
     var xmlHttp = null;
 
     try {
@@ -20,7 +20,6 @@ function GetXmlHttpObject() { //暂时先把函数搬过来，之后再尝试imp
 var xmlHttp;
 
 function nameAnalysis(action) {
-	//改为AJAX实现
 	//var myForm = document.getElementById("nameAnalysisForm");
 	//myForm.action.value=action;
 	//myForm.submit();
@@ -29,7 +28,7 @@ function nameAnalysis(action) {
 	xmlHttp.onreadystatechange = updateNameInfo;
 	xmlHttp.open("POST","name_response.php",true);
 	xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlHttp.send("action="+action);
+	xmlHttp.send("action="+action+"&name="+document.getElementById("nameInputArea").value);
 
 }
 
