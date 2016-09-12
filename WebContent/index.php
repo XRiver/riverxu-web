@@ -95,8 +95,9 @@
 		</article>
 		</main>
 	<!-- 备案信息 -->
-	<hr>
+	
 	<footer>
+		<hr>
 		<p>网站备案号：<a href="http://www.miitbeian.gov.cn/">鲁ICP备16026714号</a></p>
 		<p>联系我:
 			<img onclick="sendEmail()" alt="e-mail" src="img/e-mail.png" border="0" width="32" height="32" />
