@@ -4,7 +4,7 @@
 		<?php
 			header("Content-type: text/html; charset=utf-8");
 		?>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="X-UA-Compatible" content="text/html; charset=UTF-8">
 		<title>RiverXu个人主页</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css" />
 		<script src="js/roller.js"></script>	
