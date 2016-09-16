@@ -7,8 +7,6 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>River Xu's blog</title>
-    <link rel="stylesheet" type="test/css" href="/css/blog-dev/welcome.css" />
-    <script type="text/javascript" src="/js/blog-dev/welcome.js" />
 </head>
 
 <body>
