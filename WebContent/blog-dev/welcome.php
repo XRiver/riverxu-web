@@ -51,7 +51,7 @@
     </div>
 
     <?php
-        include("footer.php");
+        include($_SERVER[]"DOCUMENT_ROOT"]."/footer.php");
     ?>
 
     </body>
