@@ -50,10 +50,12 @@
 >
 > 2016/09/17
 >> 设计：
->> 1. 
+>> 1. MySQL两个表与登录功能关联：
+>>> 1. table users(username VARCHAR(16) PRIMARY KEY,password VARCHAR(32) not null,granted TINYINT not null) 三列分别是用户名，MD5(密码)，用户权限级别。
+>>> 2. table sid_buf(sid varchar(30),init_time bigint, granted tinyint, username VARCHAR(16)); 四列分别是sessionID，回话最近更新时间，用户权限级别，用户名。
 >> 开发完成：
 >> 1. 完成博客欢迎页（登录页面，/blog-dev/welcome.php）的HTML与JS编写
->> 2. 
+>> 2. 配置服务器MySQL，创建PHP用户与所需数据表
 
 
 
