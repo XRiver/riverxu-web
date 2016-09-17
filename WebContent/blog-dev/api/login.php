@@ -10,12 +10,14 @@
     
     $conn = get_mysql_conn();
     close_mysql($conn);
-
+    select_webdb();
+    $granted = verify_user($username,$password);
+    
     echo "admin";
     exit;
 
-    select_webdb();
-    $granted = verify_user($username,$password);
+    
+    
     if ($granted!="invalid") {
         buf_sid(session_id(),$granted);
     }
