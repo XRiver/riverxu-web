@@ -30,18 +30,15 @@
 
         global $privileges;
 
-        $sql = "select (username,password,granted) from users where username='".$username."'";
+        $sql = "select username,password,granted from users where username='".$username."'";
         $found = mysql_query($sql);
         $row = mysql_fetch_row($found);
         if (!$row) {
-            echo "No row found with:".$sql;
             return $privileges[0];
         } else {
             if ($username==$row[0]&&$password_in_md5==$row[1]) {
-                echo "Shouldn't be invalid.";
                 return $privileges[$row[2]];
             } else {
-                echo $row[1]."  Wrong password.";
                 return $privileges[0];
             }
         }
