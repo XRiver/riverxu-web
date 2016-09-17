@@ -7,15 +7,18 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
 
+    
+    $conn = get_mysql_conn();
+    close_mysql($conn);
+
     echo "admin";
     exit;
 
-    $conn = get_mysql_conn();
     select_webdb();
     $granted = verify_user($username,$password);
     if ($granted!="invalid") {
         buf_sid(session_id(),$granted);
     }
     echo $granted;
-    close_mysql($conn);
+
 ?>
