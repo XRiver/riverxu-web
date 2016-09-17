@@ -20,10 +20,8 @@
     if ($granted!="invalid") {
         buf_sid(session_id(),$granted);
     }
-
     echo "admin";
+    echo "Message:".$granted;
     exit;
-    
-    echo $granted;
 
 ?>
