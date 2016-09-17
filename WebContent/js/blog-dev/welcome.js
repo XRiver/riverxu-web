@@ -29,7 +29,7 @@ function tryLogin() {
     xmlHttp.onreadystatechange = loginRequestHandle;
     xmlHttp.open("POST","api/login.php",true);
 	xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlHttp.send("username="+username+"&password="+password);
+	xmlHttp.send("username="+username+"&password="+hex_md5(password));
 }
 
 function loginRequestHandle() {
