@@ -37,7 +37,9 @@
                 return "User found for ".$row["granted"];
                 //return $privileges[$row["granted"]];
             } else {
+                print_r($row);
                 return "Password wrong!:".$password_in_md5." cannot match ".$row["password"]; 
+
                 //return $privileges[0];
             }
         }
