@@ -27,6 +27,9 @@
     /* Look for privilege info of the user, returns a string representing its granted privilege.
        If it's not a user, "invalid" will be returned. */
     function verify_user($username,$password_in_md5) {
+        
+        global $privileges;
+
         $found = mysql_query("select (username,password,granted) from users where username='".$username."'");
         $row = mysql_fetch_row($found);
         if (!$row) {
