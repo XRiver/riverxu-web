@@ -13,11 +13,11 @@
     <header class="header">
         <div class="header-title">Welcome to River Xu's blog!</div>
         <div id="split-line" />
-        <div class="login">
+        <div class="login" id="login-module">
         <form id="login-form" action="javascript:tryLogin();" >
             用户名:<input id="username_input" type="text" name="username" required /><br>
             密码：<input id="password_input" type="password" name="password" required /><br>
-            <input id="try_login" type="button" onclick="tryLogin();" value="登录" >
+            <input id="try_login" type="submit" value="登录" >
         </form>
     </header>
     <aside id="article-module-index"><!--文章模块索引，待完成，可以根据模块数目写为静态内容-->
