@@ -30,10 +30,11 @@
 
         global $privileges;
 
-        $found = mysql_query("select (username,password,granted) from users where username='".$username."'");
+        $sql = "select (username,password,granted) from users where username='".$username."'";
+        $found = mysql_query($sql);
         $row = mysql_fetch_row($found);
         if (!$row) {
-            echo "No row found";
+            echo "No row found with:".$sql;
             return $privileges[0];
         } else {
             if ($username==$row[0]&&$password_in_md5==$row[1]) {
