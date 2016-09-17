@@ -6,11 +6,11 @@
     } else {
         echo "数据库连接成功";
         mysql_select_db('riverweb');
-        $sql = 'insert into users("username","password","granted") values ("admin","123456",1)';
+        $sql = 'insert into users(username,password,granted) values ("admin","'.md5("123456").'",1)';
         $result = mysql_query($sql);
 
         if($result) {
-            echo "Success!";
+            echo "Success!".$sql;
         } else {
             echo "Failure.";
         }
