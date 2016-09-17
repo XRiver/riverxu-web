@@ -13,14 +13,17 @@
     select_webdb();
     $granted = verify_user($username,$password);
     
-    echo "admin";
-    exit;
+    
 
     
     
     if ($granted!="invalid") {
         buf_sid(session_id(),$granted);
     }
+
+    echo "admin";
+    exit;
+    
     echo $granted;
 
 ?>
