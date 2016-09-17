@@ -30,12 +30,15 @@
         $found = mysql_query("select * from users where username='".$username."'");
         $row = mysql_fetch_row($found);
         if (!$row) {
-            return $privileges[0];
+            return "No row matched:".$username;
+            //return $privileges[0];
         } else {
             if ($username==$row["username"]&&$password_in_md5==$row["password"]) {
-                return $privileges[$row["granted"]];
+                return "User found for ".$row["granted"];
+                //return $privileges[$row["granted"]];
             } else {
-                return $privileges[0];
+                return "Password wrong!"; 
+                //return $privileges[0];
             }
         }
     }
