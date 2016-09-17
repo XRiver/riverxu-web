@@ -23,7 +23,7 @@ var xmlHttp;
 function tryLogin() {
     xmlHttp = GetXmlHttpObject();
 
-    var username = document.getElementById("username_input").value;
+    var username = document.getElementById("username-input").value;
     var password = document.getElementById("password-input").value;
 
     xmlHttp.onreadystatechange = loginRequestHandle;
