@@ -6,7 +6,7 @@
 
     echo "File included";
     
-/*
+
     session_start();
 
     $title = $_POST["title"];
@@ -16,7 +16,8 @@
         echo "No content/title found.";
         exit;
     }
-
+    echo "title and content got.";
+/*
     $conn = null;
     try {
         global $conn;
