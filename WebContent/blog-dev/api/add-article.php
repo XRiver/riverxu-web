@@ -10,10 +10,12 @@
     session_start();
 
     echo "session started.";
-/*
+
     $title = $_POST["title"];
     $content = $_POST["content"];
 
+    echo "params got";
+/*
     if (empty($title)||empty($content)) 
         echo "No content/title found.";
         //exit;
