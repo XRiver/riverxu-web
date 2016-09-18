@@ -15,13 +15,13 @@
     $content = $_POST["content"];
 
     echo "params got";
-/*
+
     if (empty($title)||empty($content)) 
         echo "No content/title found.";
         //exit;
     }
     echo "title and content got.";
-
+/*
     $conn = null;
     try {
         global $conn;
