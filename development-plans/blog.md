@@ -57,7 +57,7 @@
 完成：
 1. 完成博客欢迎页（登录页面，/blog-dev/welcome.php）的HTML与JS编写
 2. 配置服务器MySQL，创建PHP用户与所需数据表
-3. 完成登录api（/blog-dev/api/login.php）及其所需下层lib的编写
+3. 完成登录api（/blog-dev/api/login.php）及其所需下层lib的编写（但是lib文件中一些暂时没用到的函数还没有实现）
 
 2016/09/18
 设计：
