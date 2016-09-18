@@ -1,16 +1,12 @@
 <?php
 
-    try {
-        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
-        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
-        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php");
-    } catch (Exception $e) {
-        echo "Error including libs";
-        exit;
-    }
-    
+    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
+    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
+    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php"); 
 
+    echo "File included";
     
+/*
     session_start();
 
     $title = $_POST["title"];
@@ -77,7 +73,7 @@
 
     
 
-    
+*/
 
 
 ?>
