@@ -9,15 +9,17 @@
 
     session_start();
 
+    echo "session started.";
+/*
     $title = $_POST["title"];
     $content = $_POST["content"];
 
     if (empty($title)||empty($content)) 
         echo "No content/title found.";
-        exit;
+        //exit;
     }
     echo "title and content got.";
-/*
+
     $conn = null;
     try {
         global $conn;
