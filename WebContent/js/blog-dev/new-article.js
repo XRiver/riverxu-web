@@ -2,7 +2,7 @@ var xmlHttp;
 
 function uploadArticle() {
     var title = document.getElementById("title-input").value;
-    var content = document.getElementById("content-input").value;
+    var content = document.getElementById("content-input").innerHTML;
 
     if (!title===""&&!content==="") {
         xmlHttp = GetXmlHttpObject();
