@@ -19,7 +19,6 @@ function loginRequestHandle() {
             case "admin":document.getElementById("login-module").innerHTML="您已经以管理员身份登录。";
                 alert("登陆成功！");
                 break;
-            case "guest":
             case "invalid":
             default:alert("您的登录信息有误，现在仅能以访客身份查看文章，请重新登录。");break;
         }

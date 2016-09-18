@@ -2,7 +2,6 @@
     $privileges = array(
         0=>"invalid",
         1=>"admin",
-        2=>"guest",
         9=>"overtime"
     );
 
