@@ -17,7 +17,7 @@
     echo "params got";
 
     if (empty($title)||empty($content)) 
-        echo "No content/title found.";
+        echo "No content or title found.";
         //exit;
     }
     echo "title and content got.";
