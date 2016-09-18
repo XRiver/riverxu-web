@@ -37,4 +37,5 @@
 
     */
     echo "Served at Apache!";
+    exit;
 ?>
