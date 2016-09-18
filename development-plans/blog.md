@@ -37,7 +37,7 @@
 
 
 ------------
-迭代阶段（开发计划）
+迭代阶段（开发计划与日志）
 -------------
 ###1. 开发博客基础功能（需求1、2、3）
 预计完成时间：2016/09/18
@@ -67,9 +67,10 @@
 > 3. 文章正文页面(/blog-dev/view.php?aid=...)：显示aid对应文章，aid不存在则返回“文章不存在”的异常信息
 2. 服务器后台设计：
 > 1. 添加文章API(/blog-dev/api/add-article.php)：接受POST(title=...&content=...)，检查请求的session是否具有管理员权限，有则向数据库添加文章（为简化，暂时允许重名等情况），返回提示成功或失败信息。
+> 2. 新建文章存储数据表：table articles (id INT primary key auto_increment,title TINYTEXT,content TEXT); 三列分别是文章ID，文章标题，文章内容。其中文章ID不需要insert时指明，只需要之后查询。
 完成：
 1. 完成new-article.html
-
+2. 完成new-article.html所使用的js脚本与API(stub implementation)，添加/WEB-INF/php-lib/blog-article-management.php（怎么文件名越来越长了）
 
 
 

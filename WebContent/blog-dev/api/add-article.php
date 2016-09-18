@@ -1,11 +1,32 @@
 <?php
+
+    session_start();
+    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
+    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
+    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php");
+
     $title = $_POST["title"];
     $content = $_POST["content"];
 
-    //Stub implementation
-    if (!empty($title)&&!empty($content)) {
-        echo "Got your new article!<br>Title:".$title."<br>.Content:".$content;
-    } else {
+    if (empty($title)||empty($content)) 
         echo "No content/title found.";
+        exit;
     }
+
+    $conn = get_mysql_conn();
+    select_webdb();
+
+    $privilege = lookup_sid(session_id());
+    if ($privilege=="admin") {
+        //Stub implementation
+        echo "I see you can add an article, but I cannot.";
+    } else {
+        if ($privilege=="overtime") {
+            echo "Login overtime! Try login again";
+        } else {
+            echo "You don't have the admin privilege to upload an article! Or you can try login again.";
+        }
+    }
+
+    close_mysql($conn);
 ?>
