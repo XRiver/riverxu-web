@@ -1,5 +1,5 @@
 <?php
-
+/*
     session_start();
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
@@ -34,4 +34,7 @@
     }
 
     close_mysql($conn);
+
+    */
+    echo "Served at Apache!";
 ?>
