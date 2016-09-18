@@ -68,7 +68,7 @@
 2. 服务器后台设计：
 > 1. 添加文章API(/blog-dev/api/add-article.php)：接受POST(title=...&content=...)，检查请求的session是否具有管理员权限，有则向数据库添加文章（为简化，暂时允许重名等情况），返回提示成功或失败信息。
 完成：
-1. 
+1. 完成new-article.html
 
 
 
