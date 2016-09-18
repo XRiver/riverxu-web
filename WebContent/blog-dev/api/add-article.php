@@ -1,16 +1,18 @@
 <?php
-/*
-    session_start();
+
+
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php");
+
+    session_start();
 
     $title = $_POST["title"];
     $content = $_POST["content"];
 
     if (empty($title)||empty($content)) 
         echo "No content/title found.";
-        exit();
+        exit;
     }
 
     $conn = get_mysql_conn();
@@ -35,7 +37,4 @@
 
     close_mysql($conn);
 
-    */
-    echo "Served at Apache!";
-    exit;
 ?>
