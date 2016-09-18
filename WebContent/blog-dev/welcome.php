@@ -1,6 +1,5 @@
 <?php
     header("Content-type: text/html; charset=utf-8");
-    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>River Xu's blog</title>
     <script src="/js/md5-min.js"></script>
+    <script src="/js/ajax_h.js"></script>
     <script src="/js/blog-dev/welcome.js"></script>
 </head>
 

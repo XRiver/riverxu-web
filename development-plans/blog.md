@@ -41,21 +41,35 @@
 -------------
 ###1. 开发博客基础功能（需求1、2、3）
 预计完成时间：2016/09/18
+
 日志：
-> 2016/09/16
->> 设计：
->> 1. 有关管理员验证：虽然目前用户只有RX一人，但是由于将来可能提供多人验证，故设计数据库模块，记录SESSION_ID与其已获取权限。
->> 完成：
->> 1. 博客欢迎页（登录页面，/blog-dev/welcome.php）的部分HTML编写
->
-> 2016/09/17
->> 设计：
->> 1. MySQL两个表与登录功能关联：
->>> 1. table users(username VARCHAR(16) PRIMARY KEY,password VARCHAR(32) not null,granted TINYINT not null) 三列分别是用户名，MD5(密码)，用户权限级别。
->>> 2. table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint); 四列分别是sessionID，回话最近更新时间，用户权限级别，用户名。
->> 开发完成：
->> 1. 完成博客欢迎页（登录页面，/blog-dev/welcome.php）的HTML与JS编写
->> 2. 配置服务器MySQL，创建PHP用户与所需数据表
+2016/09/16
+设计：
+1. 有关管理员验证：虽然目前用户只有RX一人，但是由于将来可能提供多人验证，故设计数据库模块，记录SESSION_ID与其已获取权限。
+完成：
+1. 博客欢迎页（登录页面，/blog-dev/welcome.php）的部分HTML编写
+
+2016/09/17
+设计：
+1. MySQL两个表与登录功能关联：
+> 1. table users(username VARCHAR(16) PRIMARY KEY,password VARCHAR(32) not null,granted TINYINT not null) 三列分别是用户名，MD5(密码)，用户权限级别。
+> 2. table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint); 四列分别是sessionID，回话最近更新时间，用户权限级别，用户名。
+完成：
+1. 完成博客欢迎页（登录页面，/blog-dev/welcome.php）的HTML与JS编写
+2. 配置服务器MySQL，创建PHP用户与所需数据表
+3. 完成登录api（/blog-dev/api/login.php）及其所需下层lib的编写
+
+2016/09/18
+设计：
+1. 前端设计：为了实现需求2、3，要为管理员提供新增文章页面、浏览现有文章列表页面、文章正文页面，为一般访客提供浏览现有文章列表页面、文章正文页面
+> 1. 新增文章列表页面(/blog-dev/new-article.html)：当前要求较简单，通过JS脚本向服务器对应API(/blog-dev/api/add-article.php)POST标题(title)+正文(content)即可
+> 2. 浏览现有文章页面(/blog-dev/article-list.php)：显示当前所有文章标题，并连接到对应的文章正文页面
+> 3. 文章正文页面(/blog-dev/view.php?aid=...)：显示aid对应文章，aid不存在则返回“文章不存在”的异常信息
+2. 服务器后台设计：
+> 1. 添加文章API(/blog-dev/api/add-article.php)：接受POST(title=...&content=...)，检查请求的session是否具有管理员权限，有则向数据库添加文章（为简化，暂时允许重名等情况），返回提示成功或失败信息。
+完成：
+1. 
+
 
 
 
