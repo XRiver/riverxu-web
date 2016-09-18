@@ -6,13 +6,13 @@ function tryLogin() {
     var username = document.getElementById("username-input").value;
     var password = document.getElementById("password-input").value;
 
-    xmlHttp.onreadystatechange = loginRequestHandle;
+    xmlHttp.onreadystatechange = handleLoginResponse;
     xmlHttp.open("POST","api/login.php",true);
 	xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xmlHttp.send("username="+username+"&password="+hex_md5(password));
 }
 
-function loginRequestHandle() {
+function handleLoginResponse() {
     if (xmlHttp.readyState==4 && xmlHttp.status==200) {
 		var response = xmlHttp.responseText;
         switch(response) {
