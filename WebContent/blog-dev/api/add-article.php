@@ -16,16 +16,9 @@
     $conn = get_mysql_conn();
     select_webdb();
 
-    echo "Connected to databse...\n";
-    /////////
-    exit();
-    /////////
     $privilege = lookup_sid(session_id());
     if ($privilege=="admin") {
-        echo "admin privilege detected...\nexiting";
-        //////////
-        exit();
-        //////////
+        echo "admin privilege detected...\n";
         $id = addArticle($title,$content);
         if($id!=-1) {
             echo "Upload success! The article's id is ".$id;
