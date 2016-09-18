@@ -18,8 +18,12 @@
 
     $privilege = lookup_sid(session_id());
     if ($privilege=="admin") {
-        //Stub implementation
-        echo "I see you can add an article, but I cannot.";
+        $id = addArticle($title,$content);
+        if($id!=-1) {
+            echo "Upload success! The article's id is ".$id;
+        } else {
+            echo "Internal error. Upload failed."
+        }
     } else {
         if ($privilege=="overtime") {
             echo "Login overtime! Try login again";

@@ -16,8 +16,34 @@
         */
     function lookup_sid($sid) {
         // table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint)
+        global $privileges;
 
+        $sql = "select recent_visit,granted from sid_buf where sid='".$sid."'";
+        $found = mysql_query($sql);
+        $row = mysql_fetch_row($found);
 
+        if(!$row) {
+            return $privileges[0];
+        } else {
+            
+            $timestamp = $row[0];
+            $granted = $row[1];
+
+            if(overtime($timestamp)) {
+                return $privileges[9];
+            } else {
+                //Refresh timestamp and return granted privilege
+                $sql = "update sid_buf set recent_visit=".time()." where sid='".$sid."'";
+                mysql_query($sql);
+                return $privileges[$granted];
+            }
+        }
+
+    }
+
+    function overtime($prev_timestamp) {
+        global $overtime_in_min;
+        return (time()-$prev_timestamp) > ($overtime_in_min*60);
     }
 
 
@@ -27,7 +53,22 @@
     */
     function buf_sid($sid,$privilege) {
         // table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint)
+        global $privileges;
 
+        if (in_array($privilege,$privileges)) {
+
+            $index = -1;
+            foreach ($privileges as $key=>$value) {
+                if ($value==$privilege) {
+                    $index = $key;
+                    break;
+                }
+            }
+
+            $sql = "insert into sid_buf (sid,recent_visit,granted) values ('".$sid."',".time().",".$index.")";
+            mysql_query($sql);
+
+        }
     }
 
     /* Look for privilege info of the user, returns a string representing its granted privilege.
