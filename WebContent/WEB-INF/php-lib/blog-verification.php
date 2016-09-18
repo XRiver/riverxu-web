@@ -20,29 +20,8 @@
 
         $sql = "select recent_visit,granted from sid_buf where sid='".$sid."'";
         $found = mysql_query($sql);
-        if ($found) {
-            $row = mysql_fetch_row($found);
-            if(!$row) {
-                return $privileges[0];
-            } else {
-            
-                $timestamp = $row[0];
-                $granted = $row[1];
-
-                if(overtime($timestamp)) {
-                    return $privileges[9];
-                } else {
-                    //Refresh timestamp and return granted privilege
-                    $sql = "update sid_buf set recent_visit=".time()." where sid='".$sid."'";
-                    mysql_query($sql);
-                    return $privileges[$granted];
-                }
-            }
-        } else {
-            return $privileges[0];
-        }
+        $row = mysql_fetch_row($found);
         
-/*
         if(!$row) {
             return $privileges[0];
         } else {
@@ -59,7 +38,6 @@
                 return $privileges[$granted];
             }
         }
-*/
     }
 
     function overtime($prev_timestamp) {
