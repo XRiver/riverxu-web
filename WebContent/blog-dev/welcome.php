@@ -1,25 +1,25 @@
 <?php
     header("Content-type: text/html; charset=utf-8");
-    session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>River Xu's blog</title>
-    <link rel="stylesheet" type="test/css" href="/css/blog-dev/welcome.css" />
-    <script type="text/javascript" src="/js/blog-dev/welcome.js" />
+    <script src="/js/md5-min.js"></script>
+    <script src="/js/ajax_h.js"></script>
+    <script src="/js/blog-dev/welcome.js"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header-title">Welcome to River Xu's blog!</div>
         <div id="split-line" />
-        <div class="login">
+        <div class="login" id="login-module">
         <form id="login-form" action="javascript:tryLogin();" >
-            用户名:<input id="username_input" type="text" name="username" required /><br>
-            密码：<input id="password_input" type="password" name="password" required /><br>
-            <input id="try_login" type="button" onclick="tryLogin();" value="登录" >
+            用户名:<input id="username-input" type="text" name="username" required /><br>
+            密码：<input id="password-input" type="password" name="password" required /><br>
+            <input id="try-login" type="submit" value="登录" >
         </form>
     </header>
     <aside id="article-module-index"><!--文章模块索引，待完成，可以根据模块数目写为静态内容-->
@@ -43,8 +43,18 @@
         <div class="article-index-item">
             <div class="article-title">示例文章1</div>
             <div class="article-summary">文章1简介</div>
+            <div class="article-lable-list">文章关键词：
+                <span class="article-lable">JS</div>, <span class="article-lable">CSS</div>
+            </div>
         </div>
         <?php
             /*利用数据库信息填充*/
         ?>
     </div>
+
+    <?php
+        include($_SERVER["DOCUMENT_ROOT"]."/footer.php");
+    ?>
+
+    </body>
+</html>
