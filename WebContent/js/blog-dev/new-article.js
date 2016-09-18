@@ -4,9 +4,7 @@ function uploadArticle() {
     var title = document.getElementById("title-input").value;
     var content = document.getElementById("content-input").value;
 
-    alert("Title:"+title+";Content:"+content);
-
-    if (!title===""&&!content==="") {
+    if (title!==""&&content!=="") {
         xmlHttp = GetXmlHttpObject();
         xmlHttp.onreadystatechange = handleUploadResponse;
         xmlHttp.open("POST","api/add-article.php",true);
