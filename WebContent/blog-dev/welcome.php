@@ -51,9 +51,9 @@
             //Stub data
             $list = array(
                 0=>new MetaArticle(1,"Dummy1"),
-                1=>new MetaArticle(2,"Dummy2");
-                2=>new MetaArticle(3,"Dummy3");
-            )
+                1=>new MetaArticle(2,"Dummy2"),
+                2=>new MetaArticle(3,"Dummy3"),
+            );
 
 
             close_mysql($conn);
