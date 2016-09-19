@@ -12,13 +12,13 @@
     select_webdb();
     
     $granted = verify_user($username,$password);
-    
+
     if ($granted!="invalid") {
         $existed = lookup_sid(session_id());
-        if ($exsited=="invalid") {
-            buf_sid(session_id(),$granted);
+        if ($existed!="invalid") {
+            refresh_sid_life(session_id())
         } else {
-            refresh_sid_life(session_id());
+            buf_sid(session_id(),$granted);
         }
         
     }
