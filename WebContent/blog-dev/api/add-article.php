@@ -15,16 +15,15 @@
         exit;
     }
 
-    //OK
     $conn = get_mysql_conn();
     select_webdb();
 
     $privilege = lookup_sid(session_id());
 
-    //OK
-
     if ($privilege=="admin") {
         $id = addArticle($title,$content);
+
+        echo gettype($id);
         echo "Upload success! The article's id is ".$id;
     } else {
         if ($privilege=="overtime") {
