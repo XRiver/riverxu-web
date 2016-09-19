@@ -17,7 +17,6 @@ function uploadArticle() {
 
 function handleUploadResponse() {
     if (xmlHttp.readyState==4 && xmlHttp.status==200) {
-		//Stub implementation.
-        alert("Message from server:"+xmlHttp.responseText);
+        alert(xmlHttp.responseText);
 	}
 }

@@ -32,12 +32,15 @@
             if(overtime($timestamp)) {
                 return $privileges[9];
             } else {
-                //Refresh timestamp and return granted privilege
-                $sql = "update sid_buf set recent_visit=".time()." where sid='".$sid."'";
-                mysql_query($sql);
+                refresh_sid_life($sid);
                 return $privileges[$granted];
             }
         }
+    }
+
+    function refresh_sid_life($sid) {
+        $sql = "update sid_buf set recent_visit=".time()." where sid='".$sid."'";
+        mysql_query($sql);
     }
 
     function overtime($prev_timestamp) {
