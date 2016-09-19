@@ -41,9 +41,15 @@
 	</aside>
     <div id="article-index">
         <?php
+            include($_SERVER["DOCUMENT_ROOT"]."/WEF-INF/php-lib/mysql.php");
             include($_SERVER["DOCUMENT_ROOT"]."/WEF-INF/php-lib/blog-article-management.php");
+            
+            $conn = get_mysql_conn();
+            select_webdb();
 
             $list = getArticleList();
+
+            close_mysql($conn);
 
             foreach ($list as $meta_article) {
         ?>
