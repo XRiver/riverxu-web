@@ -1,7 +1,7 @@
 <?php
     class MetaArticle {
         private $id, $title;
-        public function MetaArticle($id,$title) {
+        public function __construct($id,$title) {
             $this->id = $id;
             $this->title = $title;
         }
