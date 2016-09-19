@@ -15,18 +15,18 @@
         exit;
     }
 
-    echo "Finished param fetch";
-    exit;
-/*
+    //OK
     $conn = get_mysql_conn();
     select_webdb();
 
     $privilege = lookup_sid(session_id());
+    echo $privilege;
+    exit;
 
     if ($privilege=="admin") {
-        echo "admin privilege detected...\n";
+
         $id = addArticle($title,$content);
-        if($id!=-1) {
+        if($id != -1) {
             echo "Upload success! The article's id is ".$id;
         } else {
             echo "Internal error. Upload failed."
@@ -41,5 +41,5 @@
 
     close_mysql($conn);
 
-*/
+
 ?>
