@@ -15,7 +15,9 @@
         exit;
     }
 
-
+    echo "Finished param fetch";
+    exit;
+/*
     $conn = get_mysql_conn();
     select_webdb();
 
@@ -39,5 +41,5 @@
 
     close_mysql($conn);
 
-
+*/
 ?>
