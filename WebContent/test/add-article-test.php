@@ -6,11 +6,9 @@
     select_webdb();
 
     $title = "Hello";
-    $content = $title." World";
+    $content = $title." Wo'r\"ld";
 
     echo "Id:".addArticle($title,$content);
 
     close_mysql($conn);
-
-
 ?>
