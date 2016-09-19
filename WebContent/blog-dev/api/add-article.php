@@ -22,7 +22,7 @@
     $privilege = lookup_sid(session_id());
     echo $privilege;
     exit;
-
+/*
     if ($privilege=="admin") {
 
         $id = addArticle($title,$content);
@@ -40,6 +40,6 @@
     }
 
     close_mysql($conn);
-
+*/
 
 ?>
