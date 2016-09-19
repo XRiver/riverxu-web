@@ -9,7 +9,6 @@
 
     
     $conn = get_mysql_conn();
-    close_mysql($conn);
     select_webdb();
     
     $granted = verify_user($username,$password);
@@ -24,4 +23,6 @@
         
     }
     echo $granted;
+
+    close_mysql($conn);
 ?>

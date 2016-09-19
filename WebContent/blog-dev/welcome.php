@@ -40,15 +40,23 @@
 		</nav>
 	</aside>
     <div id="article-index">
+        <?php
+            include($_SERVER["DOCUMENT_ROOT"]."/WEF-INF/php-lib/blog-article-management.php");
+
+            $list = getArticleList();
+
+            foreach ($list as $meta_article) {
+        ?>
+
         <div class="article-index-item">
-            <div class="article-title">示例文章1</div>
+            <div class="article-title"><?php echo '<a href="/blog-dev/view-article.php?id='.$meta_article->getId().'">'.$meta_article->getTitle().'</a>';  ?></div>
             <div class="article-summary">文章1简介</div>
             <div class="article-lable-list">文章关键词：
                 <span class="article-lable">JS</div>, <span class="article-lable">CSS</div>
             </div>
         </div>
         <?php
-            /*利用数据库信息填充*/
+            }
         ?>
     </div>
 
