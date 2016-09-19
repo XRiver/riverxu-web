@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>RiverXu个人主页</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css" />
+		<script src="js/ajax_h.js"></script>
 		<script src="js/index.js"></script>	
 	</head>
 	
