@@ -47,14 +47,7 @@
             $conn = get_mysql_conn();
             select_webdb();
 
-            //$list = getArticleList();
-            //Stub data
-            $list = array(
-                0=>new MetaArticle(1,"Dummy1"),
-                1=>new MetaArticle(2,"Dummy2"),
-                2=>new MetaArticle(3,"Dummy3"),
-            );
-
+            $list = getArticleList();
 
             close_mysql($conn);
 
