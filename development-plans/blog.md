@@ -72,6 +72,10 @@
 1. 完成new-article.html
 2. 完成new-article.html所使用的js脚本与API(stub implementation)，添加/WEB-INF/php-lib/blog-article-management.php（怎么文件名越来越长了）
 
+2016/09/19
+完成：
+1. 解决上传文章中的bug。
+2.
 
 
 
