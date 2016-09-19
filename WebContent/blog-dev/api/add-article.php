@@ -21,10 +21,13 @@
     $privilege = lookup_sid(session_id());
 
     if ($privilege=="admin") {
-        $id = addArticle($title,$content);
-
-        echo gettype($id);
-        echo "Upload success! The article's id is ".$id;
+        $id = intval(addArticle($title,$content));
+        if (-1 != $id) {
+            echo "Upload success! The article's id is ".$id;
+        } else {
+            echo "Internal error! Cannot upload an article.";
+        }
+        
     } else {
         if ($privilege=="overtime") {
             echo "Login overtime! Try login again";
