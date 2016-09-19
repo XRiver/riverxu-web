@@ -77,6 +77,8 @@
 完成：
 1. 解决上传文章中的bug。
 2. 编写、测试了获取文章列表与具体文章的PHP lib.
+3. 将实际文章列表链接至welcome.php.
+4. 编写了view-article.php.
 
 
 
