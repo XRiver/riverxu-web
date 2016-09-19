@@ -20,17 +20,12 @@
     select_webdb();
 
     $privilege = lookup_sid(session_id());
-    echo $privilege;
-    exit;
-/*
-    if ($privilege=="admin") {
 
+    //OK
+
+    if ($privilege=="admin") {
         $id = addArticle($title,$content);
-        if($id != -1) {
-            echo "Upload success! The article's id is ".$id;
-        } else {
-            echo "Internal error. Upload failed."
-        }
+        echo "Upload success! The article's id is ".$id;
     } else {
         if ($privilege=="overtime") {
             echo "Login overtime! Try login again";
@@ -40,6 +35,6 @@
     }
 
     close_mysql($conn);
-*/
+
 
 ?>
