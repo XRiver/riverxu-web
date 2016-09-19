@@ -16,7 +16,7 @@
     if ($granted!="invalid") {
         $existed = lookup_sid(session_id());
         if ($existed!="invalid") {
-            refresh_sid_life(session_id())
+            refresh_sid_life(session_id());
         } else {
             buf_sid(session_id(),$granted);
         }
