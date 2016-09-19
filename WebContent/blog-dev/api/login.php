@@ -18,7 +18,7 @@
         $existed = lookup_sid(session_id());
         if ($exsited=="invalid") {
             buf_sid(session_id(),$granted);
-        } else ($existed=="overtime") {
+        } else {
             refresh_sid_life(session_id());
         }
         
