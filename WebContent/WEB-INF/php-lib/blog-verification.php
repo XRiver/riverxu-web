@@ -59,14 +59,7 @@
 
         if (in_array($privilege,$privileges)) {
 
-            $index = -1;
-            foreach ($privileges as $key=>$value) {
-                if ($value==$privilege) {
-                    $index = $key;
-                    break;
-                }
-            }
-
+            $index = array_keys($privileges,$privilege)[0];
             $sql = "insert into sid_buf (sid,recent_visit,granted) values ('".$sid."',".time().",".$index.")";
             mysql_query($sql);
 
