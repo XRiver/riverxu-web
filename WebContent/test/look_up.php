@@ -6,8 +6,13 @@
     $c = get_mysql_conn();
     select_webdb();
 
+///
+    echo "Can?"
+///
+
+/*
     $privilege = lookup_sid(session_id());
     echo $privilege;
     close_mysql($c);
-
+*/
 ?>
