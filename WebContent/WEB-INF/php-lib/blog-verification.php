@@ -45,7 +45,7 @@
 
     function overtime($prev_timestamp) {
         global $overtime_in_min;
-        return (time()-$prev_timestamp) > ($overtime_in_min*60);
+        return (time()-intval($prev_timestamp)) > ($overtime_in_min*60);
     }
 
 
