@@ -57,9 +57,7 @@
         // table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint)
         global $privileges;
 
-        if (in_array($privilege,$privileges)) {
-
-            $index = array_keys($privileges,$privilege)[0];
+        if ($index = array_search($privilege,$privileges) !== false) {
             $sql = "insert into sid_buf (sid,recent_visit,granted) values ('".$sid."',".time().",".$index.")";
             mysql_query($sql);
 
