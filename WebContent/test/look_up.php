@@ -2,6 +2,7 @@
 
     ///
     echo "Can?";
+    echo $_SERVER["DOCUMENT_ROOT"];
 /*
 
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
