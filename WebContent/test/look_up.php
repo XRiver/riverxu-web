@@ -1,4 +1,9 @@
 <?php
+
+    ///
+    echo "Can?";
+/*
+
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
 
