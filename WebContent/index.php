@@ -38,7 +38,7 @@
 
 		<main>
 		<article class="Content"><!-- 正文 -->
-		<h2>正文：网站功能正在开发中，没事可以点点下面的按钮，检测血统。</h2>
+		<h2><a href="http://riverxu.cn/blog-dev">开发中的博客</a></h2>
 		<input id="roller" type="button" value="Roll" onclick="rollDie()" />
         <div id="die"></div>
         <form id="nameAnalysisForm" action="/index.php" method="POST">
