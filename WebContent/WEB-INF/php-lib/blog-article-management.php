@@ -85,5 +85,17 @@
         }
     }
 
+    /* Delete an article identified by its ID. 
+        Pre-condition: Connected to the web's database.
+        Returns: status code.
+             0 for success deletion; 1 for cannot find the corresponding article. 2 for database internal error.*/
+    function delArticle($id) {
+        //table articles (id INT primary key auto_increment,title TINYTEXT,content TEXT);
+
+
+
+
+        return 2;
+    }
 
 ?>

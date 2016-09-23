@@ -11,7 +11,7 @@
     $content = $_POST["content"];
 
     if (empty($title)||empty($content)) {
-        echo "No content or title found.";
+        echo "E01"; // Title & content can't be empty!
         exit;
     }
 
@@ -25,14 +25,14 @@
         if (-1 != $id) {
             echo "Upload success! The article's id is ".$id;
         } else {
-            echo "Internal error! Cannot upload an article.";
+            echo "E02"; //Internal error! Cannot upload an article.
         }
         
     } else {
         if ($privilege=="overtime") {
-            echo "Login overtime! Try login again";
+            echo "E03";  //Login overtime! Try login again
         } else {
-             echo "You don't have the admin privilege to upload an article! Or you can try login again.";
+             echo "E04";  //You don't have the admin privilege to upload an article! Or you can try login again.
         }
     }
 
