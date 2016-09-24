@@ -88,20 +88,27 @@
     /* Delete an article identified by its ID. 
         Pre-condition: Connected to the web's database.
         Returns: status code.
-             0 for success deletion; 1 for cannot find the corresponding article. 2 for database internal error.*/
+             0 for success deletion; 1 for cannot find the article, 2 for database internal error.*/
     function delArticle($id) {
         //table articles (id INT primary key auto_increment,title TINYTEXT,content TEXT);
         $sql = "delete from articles where id=".$id;
         try {
             $result = mysql_query($sql);
             if ($result) {
-                return 0;
+                $rows = mysql_affected_rows();
+                if ($rows==1) {
+                    return 0;
+                } else if ($rows==0) {
+                    return 1;
+                }
             } else {
-                return 1;
+                return 2;
             }
         } catch (Exception $e) {
             return 2;
         }
+
+        return 2;
     }
 
 ?>
