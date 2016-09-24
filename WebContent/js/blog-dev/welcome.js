@@ -55,7 +55,7 @@ function setAdminUI() {
 function makeDelVisible() {
     var list = document.getElementsByClassName("delButton");
     for (var i=0;i<list.length;i++) {
-        list[i].style.display = "line";
+        list[i].style.display = "inline";
     }
 
 }
