@@ -40,12 +40,12 @@
         <article>
             <h1>
             <?php
-                echo $title;
+                echo htmlspecialchars($title);
             ?>
             </h1>
             <p>
             <?php
-                echo $content;
+                echo htmlspecialchars($content);
             ?>
             </p>
         </article>

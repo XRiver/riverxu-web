@@ -57,7 +57,7 @@
 
         <div class="article-index-item">
             <div class="article-title">
-            <?php echo '<a href="/blog-dev/view-article.php?id='.$meta_article->getId().'">'.$meta_article->getTitle().'</a>';  ?>
+            <?php echo '<a href="/blog-dev/view-article.php?id='.$meta_article->getId().'">'.htmlspecialchars($meta_article->getTitle()).'</a>';  ?>
             </div>
             <div class="article-summary">文章1简介</div>
             <div class="article-lable-list">文章关键词：
