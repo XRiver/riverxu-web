@@ -24,6 +24,6 @@
     }
     echo $granted;
 
-    setcookie("privilege",$granted);
+    setcookie("privilege",$granted,0,'/blog-dev/');
     close_mysql($conn);
 ?>
