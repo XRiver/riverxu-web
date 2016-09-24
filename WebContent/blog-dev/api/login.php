@@ -24,5 +24,7 @@
     }
     echo $granted;
 
+    $_COOKIE["privilege"] = $granted;
+
     close_mysql($conn);
 ?>

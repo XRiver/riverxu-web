@@ -8,6 +8,7 @@
     <title>River Xu's blog</title>
     <script src="/js/md5-min.js"></script>
     <script src="/js/ajax_h.js"></script>
+    <script src="/js/cookies.js"></script>
     <script src="/js/blog-dev/welcome.js"></script>
 </head>
 

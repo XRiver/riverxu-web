@@ -64,3 +64,12 @@ function setAdminLoginArea() {
     document.getElementById("login-module").innerHTML=
             "您已经以管理员身份登录。<br><a href=\"/blog-dev/new-article.php\">前往编写文章</a>";
 }
+
+
+var granted = getCookies("privilege");
+
+if (granted) {
+    if (granted=="admin") {
+        setAdminUI();
+    }
+}
