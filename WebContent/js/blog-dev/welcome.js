@@ -70,6 +70,6 @@ var granted = getCookie("privilege");
 
 if (granted) {
     if (granted=="admin") {
-        setAdminUI();
+        window.onload = setAdminUI;
     }
 }
