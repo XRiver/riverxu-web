@@ -66,7 +66,7 @@ function setAdminLoginArea() {
 }
 
 
-var granted = getCookies("privilege");
+var granted = getCookie("privilege");
 
 if (granted) {
     if (granted=="admin") {
