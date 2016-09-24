@@ -23,7 +23,7 @@
     if ($privilege=="admin") {
         $id = intval(addArticle($title,$content));
         if (-1 != $id) {
-            echo "Upload success! The article's id is ".$id;
+            echo $id;
         } else {
             echo "E02"; //Internal error! Cannot upload an article.
         }

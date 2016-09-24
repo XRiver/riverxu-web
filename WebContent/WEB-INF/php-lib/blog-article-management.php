@@ -91,11 +91,17 @@
              0 for success deletion; 1 for cannot find the corresponding article. 2 for database internal error.*/
     function delArticle($id) {
         //table articles (id INT primary key auto_increment,title TINYTEXT,content TEXT);
-
-
-
-
-        return 2;
+        $sql = "delete from articles where id=".$id;
+        try {
+            $result = mysql_query($sql);
+            if ($result) {
+                return 0;
+            } else {
+                return 1;
+            }
+        } catch (Exception $e) {
+            return 2;
+        }
     }
 
 ?>

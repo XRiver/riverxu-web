@@ -24,7 +24,7 @@
     $privilege = lookup_sid(session_id());
 
     if (can_del_article($privilege)) {
-
+        
     } else { //Privilege failure handling
 
     }
