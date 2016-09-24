@@ -62,6 +62,7 @@
             <div class="article-lable-list">文章关键词：
                 <span class="article-lable">JS</div>, <span class="article-lable">CSS</div>
             </div>
+            <?php echo '<input class="delButton" type="button" onclick="tryDel('.$meta_article->getId().')" value="Delete" style="display:none" />' ?>
         </div>
         <?php
             }

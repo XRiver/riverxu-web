@@ -1,4 +1,11 @@
 <?php
+/** Delete an article (identified by its id) from storage.
+Method=POST
+Parameter: id
+
+
+*/
+
 
     function can_del_article($priv) {
         return $priv == "admin";
@@ -11,10 +18,10 @@
     
     session_start();
 
-    $id = $_POST["tid"];
+    $id = $_POST["id"];
 
     if (empty($id)) {
-        echo "E01";
+        echo "E01"; // No id parameter found.
         exit;
     }
 
@@ -24,12 +31,20 @@
     $privilege = lookup_sid(session_id());
 
     if (can_del_article($privilege)) {
-        
+        $result = delArticle($id);
+        switch ($result) {
+        case 0://Success
+            echo $id;break;
+        case 1://Cannot find article
+            echo "E02";break;
+        case 2://Database internal error
+        default:
+            echo "E03";break;
+        }
     } else { //Privilege failure handling
-
+        echo "E04";
     }
 
-
-    
+    mysql_close();
 
 ?>
