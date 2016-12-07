@@ -6,15 +6,22 @@ function tryLogin() {
     var username = document.getElementById("username-input").value;
     var password = document.getElementById("password-input").value;
 
-    xmlHttp.onreadystatechange = handleLoginResponse;
-    xmlHttp.open("POST","api/login.php",true);
-	xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlHttp.send("username="+username+"&password="+hex_md5(password));
+    $.ajax({
+        url:"api/login.php",
+        type:"POST",
+        complete:"handleLoginResponse",
+        contentType:"application/x-www-form-urlencoded",
+        data: {
+            username:username,
+            password:hex_md5(password)
+        }
+    })
 }
 
-function handleLoginResponse() {
-    if (xmlHttp.readyState==4 && xmlHttp.status==200) {
-		var response = xmlHttp.responseText;
+function handleLoginResponse(e,code) {
+    if (e.readyState==4 && e.status==200) {
+		var response = e.responseText;
+        alert(response+"  "+code);
         switch(response) {
             case "admin":setAdminUI();break;
             case "invalid":

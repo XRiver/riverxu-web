@@ -6,8 +6,8 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>River Xu's blog</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <script src="/js/md5-min.js"></script>
-    <script src="/js/ajax_h.js"></script>
     <script src="/js/cookies.js"></script>
     <script src="/js/blog-dev/welcome.js"></script>
 </head>

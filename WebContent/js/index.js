@@ -19,10 +19,6 @@ function tryRedirect() {
 	form.submit();
 }
 
-function sendEmail() {
-	window.open("mailto:sdxujianghe@126.com");
-}
-
 function rollDie() {
 	document.getElementById("die").innerHTML = "&#x268" + Math.floor(Math.random()*6)+";";
 }
