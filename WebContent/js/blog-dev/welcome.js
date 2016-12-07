@@ -1,7 +1,5 @@
-var xmlHttp;
 
 function tryLogin() {
-    xmlHttp = GetXmlHttpObject();
 
     var username = document.getElementById("username-input").value;
     var password = document.getElementById("password-input").value;
@@ -31,18 +29,21 @@ function handleLoginResponse(e,code) {
 }
 
 function tryDel(id) {
-    xmlHttp = GetXmlHttpObject();
-
-    xmlHttp.onreadystatechange = handleDelResponse;
-    xmlHttp.open("POST","api/del-article.php",true);
-	xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlHttp.send("id="+id);
+    $.ajax({
+        url:"api/del-article.php",
+        type:"POST",
+        contentType:"application/x-www-form-urlencoded",
+        complete:handleDelResponse,
+        data:{
+            id:id
+        }
+    })
 }
 
 
-function handleDelResponse() {
-    if (xmlHttp.readyState==4 && xmlHttp.status==200) {
-		var response = xmlHttp.responseText;
+function handleDelResponse(e,code) {
+    if (e.readyState==4 && e.status==200) {
+		var response = e.responseText;
         if (response.charAt(0)=='E') {
             switch(response) {//dummy
                 default: alert("Error!");
