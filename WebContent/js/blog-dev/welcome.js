@@ -7,7 +7,7 @@ function tryLogin() {
     $.ajax({
         url:"api/login.php",
         type:"POST",
-        complete:"handleLoginResponse",
+        complete:handleLoginResponse,
         contentType:"application/x-www-form-urlencoded",
         data: {
             username:username,
@@ -16,16 +16,17 @@ function tryLogin() {
     })
 }
 
-function handleLoginResponse(e,code) {
-    if (e.readyState==4 && e.status==200) {
-		var response = e.responseText;
-        alert(response+"  "+code);
+function handleLoginResponse(xhr,textStatus) {
+    if (textStatus=="success") {
+		var response = xhr.responseText;
         switch(response) {
             case "admin":setAdminUI();break;
             case "invalid":
             default:alert("您的登录信息有误，现在仅能以访客身份查看文章，请重新登录。");break;
         }
-	}
+	} else {
+	    alert("FAILURE");
+    }
 }
 
 function tryDel(id) {
@@ -41,9 +42,9 @@ function tryDel(id) {
 }
 
 
-function handleDelResponse(e,code) {
-    if (e.readyState==4 && e.status==200) {
-		var response = e.responseText;
+function handleDelResponse(xhr,textStatus) {
+    if (textStatus=="success") {
+		var response = xhr.responseText;
         if (response.charAt(0)=='E') {
             switch(response) {//dummy
                 default: alert("Error!");
