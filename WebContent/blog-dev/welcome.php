@@ -77,12 +77,14 @@
 
     <?php
         include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
-
-        $user_privilege = lookup_sid(session_id());
+        $sessionid = sessionid;
+        $user_privilege = lookup_sid(sessionid);
 
         echo <<<EOF
 <script> $(document).ready(function () {
-<!-- 权限是$user_privilege -->
+<!-- 权限是$user_privilege，session_id 是$sessionid -->
+
+
 EOF;
 
         if ($user_privilege=="admin") {

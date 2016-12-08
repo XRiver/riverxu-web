@@ -43,12 +43,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-article.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blog-dev/api/add-article.php">
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="425">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding>
+                <marker date="1481200181397" expanded="true" signature="2765:2795" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -281,15 +283,15 @@
       <workItem from="1481072477834" duration="2600000" />
       <workItem from="1481184182071" duration="2085000" />
       <workItem from="1481187154646" duration="15000" />
-      <workItem from="1481197998098" duration="1903000" />
+      <workItem from="1481197998098" duration="2182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6603000" />
+    <option name="totallyTimeSpent" value="6882000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -366,9 +368,7 @@
         <state relative-caret-position="250">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
-            <marker date="1481199897496" expanded="true" signature="2712:2742" ph="{...}" />
-            <marker date="1481199897496" expanded="true" signature="2712:2785" ph="{...}" />
-            <marker date="1481199897496" expanded="true" signature="2751:2785" ph="{...}" />
+            <marker date="1481200181397" expanded="true" signature="2765:2795" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -462,14 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/jquery-cdn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/blog-dev/welcome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -480,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog-verification.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="275">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <marker date="1474426808913" expanded="true" signature="781:842" ph="select recen... sid_buf" />
             <marker date="1474426808913" expanded="true" signature="1352:1415" ph="update sid_b... " />
@@ -491,23 +483,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
+    <entry file="file://$PROJECT_DIR$/blog-dev/api/add-article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-          <folding>
-            <marker date="1481199897496" expanded="true" signature="2712:2742" ph="{...}" />
-            <marker date="1481199897496" expanded="true" signature="2712:2785" ph="{...}" />
-            <marker date="1481199897496" expanded="true" signature="2751:2785" ph="{...}" />
-          </folding>
+        <state relative-caret-position="181">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog-dev/api/add-article.php">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/jquery-cdn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="125">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <marker date="1481200181397" expanded="true" signature="2765:2795" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
