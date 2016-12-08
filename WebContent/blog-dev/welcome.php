@@ -45,13 +45,11 @@
         <?php
             include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
             include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php");
-            
+            include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
             $conn = get_mysql_conn();
             select_webdb();
 
             $list = getArticleList();
-
-            close_mysql($conn);
 
             foreach ($list as $k=>$meta_article) {
         ?>
@@ -76,11 +74,6 @@
     ?>
 
     <?php
-        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
-        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
-        $conn = get_mysql_conn();
-        select_webdb();
-
         $sessionid = session_id();
         $user_privilege = lookup_sid($sessionid);
 
