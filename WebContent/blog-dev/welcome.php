@@ -82,8 +82,8 @@
 
         echo <<<EOF
 <script> $(document).ready(function () {
-<!-- 权限是$user_privilege，session_id是$sessionid -->
-
+<!-- 权限是$user_privilege -->
+<!-- session_id是$sessionid -->
 
 EOF;
 
