@@ -1,5 +1,6 @@
 <?php
     header("Content-type: text/html; charset=utf-8");
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,6 +73,27 @@
 
     <?php
         include($_SERVER["DOCUMENT_ROOT"]."/footer.php");
+    ?>
+
+    <?php
+        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
+
+        $user_privilege = lookup_sid(session_id());
+
+        echo <<<EOF
+<script> $(document).ready(function () {
+EOF;
+
+        if ($user_privilege=="admin") {
+            echo 'setAdminUI();';
+        } else if ($user_privilege=="overtime") {
+            echo 'alert("您之前的登陆已经过期");';
+        }
+
+        echo <<<EOF
+});</script>
+EOF;
+
     ?>
 
     </body>

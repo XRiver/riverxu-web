@@ -58,7 +58,6 @@ function handleDelResponse(xhr,textStatus) {
 function setAdminUI() {
     setAdminLoginArea();
     makeDelVisible();
-    alert("登陆成功！");
 }
 
 function makeDelVisible() {
@@ -72,13 +71,4 @@ function makeDelVisible() {
 function setAdminLoginArea() {
     document.getElementById("login-module").innerHTML=
             "您已经以管理员身份登录。<br><a href=\"/blog-dev/new-article.php\">前往编写文章</a>";
-}
-
-
-var granted = getCookie("privilege");
-
-if (granted) {
-    if (granted=="admin") {
-        window.onload = setAdminUI;
-    }
 }
