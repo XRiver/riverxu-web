@@ -1,5 +1,5 @@
 <?php
     echo <<<EOF
-http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js
+http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js
 EOF;
 
