@@ -77,12 +77,12 @@
 
     <?php
         include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
-        $sessionid = sessionid;
-        $user_privilege = lookup_sid(sessionid);
+        $sessionid = session_id();
+        $user_privilege = lookup_sid($sessionid);
 
         echo <<<EOF
 <script> $(document).ready(function () {
-<!-- 权限是$user_privilege，session_id 是$sessionid -->
+<!-- 权限是$user_privilege，session_id是$sessionid -->
 
 
 EOF;
