@@ -82,6 +82,7 @@
 
         echo <<<EOF
 <script> $(document).ready(function () {
+<!-- 权限是$user_privilege -->
 EOF;
 
         if ($user_privilege=="admin") {
