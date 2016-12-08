@@ -78,8 +78,6 @@
         $user_privilege = lookup_sid($sessionid);
 
         echo <<<EOF
-        <!-- 权限是$user_privilege -->
-        <!-- session_id是$sessionid -->
         <script> $(document).ready(function () {
 EOF;
 
