@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>RiverXu个人主页</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css" />
-		<script src="js/ajax_h.js"></script>
+		<script src="<?php include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/jquery-cdn.php") ?>"></script>
 		<script src="js/index.js"></script>	
 	</head>
 	
@@ -56,16 +56,10 @@
 		</article>
 		</main>
 	<!-- 备案信息 -->
-	
-	<footer>
-		<hr>
-		<p>网站备案号：<a href="http://www.miitbeian.gov.cn/">鲁ICP备16026714号</a></p>
-		<p>联系我:
-			<img onclick="sendEmail()" alt="e-mail" src="img/e-mail.png" border="0" width="32" height="32" />
-			<br>
-			<small><s>没有什么最终解释权归属问题。</s></small>
-		</p>
-	</footer>
+
+		<?php
+		include($_SERVER["DOCUMENT_ROOT"]."/footer.php");
+		?>
 
 	</body>
 </html>

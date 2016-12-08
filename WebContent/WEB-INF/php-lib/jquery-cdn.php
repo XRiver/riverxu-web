@@ -1,0 +1,5 @@
+<?php
+    echo <<<EOF
+http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js
+EOF;
+

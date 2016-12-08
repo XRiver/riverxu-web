@@ -6,7 +6,7 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <title>添加一篇新文章</title>
-        <script src="/js/ajax_h.js"></script>
+        <script src="<?php include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/jquery-cdn.php") ?>"></script>
         <script src="/js/blog-dev/new-article.js"></script>
     </head>
     <body>
