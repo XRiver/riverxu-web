@@ -77,14 +77,17 @@
 
     <?php
         include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
+        include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
+        $conn = get_mysql_conn();
+        select_webdb();
+
         $sessionid = session_id();
         $user_privilege = lookup_sid($sessionid);
 
         echo <<<EOF
-<script> $(document).ready(function () {
-<!-- 权限是$user_privilege -->
-<!-- session_id是$sessionid -->
-
+        <!-- 权限是$user_privilege -->
+        <!-- session_id是$sessionid -->
+        <script> $(document).ready(function () {
 EOF;
 
         if ($user_privilege=="admin") {
@@ -94,8 +97,9 @@ EOF;
         }
 
         echo <<<EOF
-});</script>
+        });</script>
 EOF;
+        close_mysql($conn);
 
     ?>
 
