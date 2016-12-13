@@ -18,7 +18,7 @@
         if ($existed!="invalid") {
             refresh_sid_life(session_id());
         } else {
-            buf_sid(session_id(),$granted);
+            buf_sid(session_id(),$granted,$username);
         }
         
     }

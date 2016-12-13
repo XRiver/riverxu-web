@@ -53,12 +53,13 @@
     Pre-condition: Connected to the database.
     Returns: void 
     */
-    function buf_sid($sid,$privilege) {
+    function buf_sid($sid,$privilege,$username) {
         // table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint)
         global $privileges;
 
         if ($index = array_search($privilege,$privileges) !== false) {
-            $sql = "insert into sid_buf (sid,recent_visit,granted) values ('".$sid."',".time().",".$index.")";
+            $time = time();
+            $sql = "insert into sid_buf (sid,recent_visit,granted,username) values ($sid,$time,$index,$username)";
             mysql_query($sql);
 
         }
