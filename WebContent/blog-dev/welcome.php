@@ -79,6 +79,7 @@
 
         echo <<<EOF
         <script> $(document).ready(function () {
+
 EOF;
 
         if ($user_privilege=="admin") {
@@ -90,6 +91,7 @@ EOF;
         }
 
         echo <<<EOF
+        
         });</script>
 EOF;
         close_mysql($conn);

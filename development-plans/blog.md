@@ -100,12 +100,13 @@
 
 2016/12/13
 设计：
-1. 评论的数据存储：新增MySQL数据表table comments(at INT,content VARCHAR(1024),username VARCHAR(16),time BIGINT) 四列分别是评论所属文章id（主评论区为-1）、评论内容、评论用户名、留言时间（时间戳）。
+1. 评论的数据存储：新增MySQL数据表table comments(at INT,content varchar(1024),username varchar(16),time BIGINT) 四列分别是评论所属文章id（主评论区为-1）、评论内容、评论用户名、留言时间（时间戳）。
 2. 修改sid_buf及相关数据表操作：新增列username VARCAHR(16)，方便查询当前会话的用户究竟是谁，原先只能了解权限，功能相当受限。
-3. 增加api/update-article.php接受POST用于修改文章内容
+3. 增加api/update-article.php接受POST用于修改文章内容。
 4. 在view-article.php中新增功能按钮“修改”，仅当会话用户为管理员时才会生成，可以显示修改文章子界面。
 开发：
-1. 
+1. 完成了数据表的新增与修改。
+2. 修改function buf_sid签名及引用函数的地方。还有几个相关函数需要修改。
 
 
   [1]: http://riverxu.cn/blog-dev
