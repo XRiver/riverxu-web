@@ -59,9 +59,9 @@
 
         if ($index = array_search($privilege,$privileges) !== false) {
             $time = time();
-            $sql = "insert into sid_buf (sid,recent_visit,granted,username) values ($sid,$time,$index,$username)";
+            $sql = "insert into sid_buf (sid,recent_visit,granted,username) values ('".
+                $sid."',".$time.",".$index.",'".$username."');";
             mysql_query($sql);
-
         }
     }
 

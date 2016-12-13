@@ -58,7 +58,7 @@
             <div class="article-title">
             <?php echo '<a href="/blog-dev/view-article.php?id='.$meta_article->getId().'">'.htmlspecialchars($meta_article->getTitle()).'</a>';  ?>
             </div>
-            <div class="article-summary">文章1简介</div>
+            <div class="article-summary">文章<?php echo $meta_article->getId();  ?>简介</div>
             <div class="article-lable-list">文章关键词：
                 <span class="article-lable">JS</div>, <span class="article-lable">CSS</div>
             </div>
@@ -85,6 +85,8 @@ EOF;
             echo 'setAdminUI();';
         } else if ($user_privilege=="overtime") {
             echo 'alert("您之前的登陆已经过期");';
+        } else {
+            echo '//'.$sessionid."----".$user_privilege;
         }
 
         echo <<<EOF
