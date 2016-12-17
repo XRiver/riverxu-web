@@ -51,9 +51,9 @@
         </article>
         <div id="add-comment">
         <form action="api/add-comment.php" method="post">
-            <p>昵称：</p><input type="text" id="username" />
-            <p>评论内容：</p><input type="text" id="content" />
-            <input type="hidden" id="at" value="<?php echo $id;?>" />
+            <p>昵称：</p><input type="text" name="username" />
+            <p>评论内容：</p><input type="text" name="content" />
+            <input type="hidden" name="at" value="<?php echo $id;?>" />
             <button type="submit">添加评论</button>
         </form>
 
