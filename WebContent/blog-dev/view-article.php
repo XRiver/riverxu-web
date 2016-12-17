@@ -2,7 +2,7 @@
     header("Content-type: text/html; charset=utf-8");
 
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
-    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php"); 
+    include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog-article-management.php");
 
     if (!isset($_GET["id"])) {
         echo "Article id is necessary for article viewing.";

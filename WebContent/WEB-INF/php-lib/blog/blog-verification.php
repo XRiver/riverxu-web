@@ -7,6 +7,8 @@
 
     $overtime_in_min = 15;
 
+    include ($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog/model/User.php");
+
     /* Look for recent records of this session and find its granted privilege. Will automatically refresh sid's overtime.
     Pre-condition: Connected to the database.
        Returns: If the sid was found and its most recent update time was within the limit time,
@@ -18,22 +20,23 @@
         // table sid_buf(sid varchar(30),recent_visit BIGINT, granted tinyint)
         global $privileges;
 
-        $sql = "select recent_visit,granted from sid_buf where sid='".$sid."'";
+        $sql = "select recent_visit,granted,username from sid_buf where sid='".$sid."'";
         $found = mysql_query($sql);
         $row = mysql_fetch_row($found);
         
         if(!$row) {
-            return $privileges[0];
+            return new \blog\User("INVALID",$privileges[0]);
         } else {
             
             $timestamp = $row[0];
             $granted = $row[1];
+            $username = $row[2];
 
             if(overtime($timestamp)) {
-                return $privileges[9];
+                return new \blog\User($username,$privileges[9]);
             } else {
                 refresh_sid_life($sid);
-                return $privileges[$granted];
+                return new \blog\User($username,$granted);
             }
         }
     }
@@ -78,12 +81,12 @@
         $found = mysql_query($sql);
         $row = mysql_fetch_row($found);
         if (!$row) {
-            return $privileges[0];
+            return new \blog\User("INVALID",$privileges[0]);
         } else {
             if ($username==$row[0]&&$password_in_md5==$row[1]) {
-                return $privileges[$row[2]];
+                return new \blog\User($username,$privileges[$row[2]]);
             } else {
-                return $privileges[0];
+                return new \blog\User("INVALID",$privileges[0]);
             }
         }
     }

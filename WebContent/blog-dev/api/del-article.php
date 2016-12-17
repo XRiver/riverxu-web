@@ -13,8 +13,8 @@ Parameter: id
 
 
     include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
-    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-verification.php");
-    include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/blog-article-management.php"); 
+    include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog/blog-verification.php");
+    include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog/blog-article-management.php");
     
     session_start();
 
@@ -28,7 +28,8 @@ Parameter: id
     $conn = get_mysql_conn();
     select_webdb();
 
-    $privilege = lookup_sid(session_id());
+    $user = lookup_sid(session_id());
+    $privilege = $user->getPrivilege();
 
     if (can_del_article($privilege)) {
         $result = delArticle($id);
