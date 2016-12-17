@@ -36,7 +36,7 @@
                 return new \blog\User($username,$privileges[9]);
             } else {
                 refresh_sid_life($sid);
-                return new \blog\User($username,$granted);
+                return new \blog\User($username,$privileges[$granted]);
             }
         }
     }

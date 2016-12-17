@@ -24,33 +24,43 @@
       <file leaf-file-name="blog-verification.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-verification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="975">
+              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
-                <marker date="1481961130150" expanded="true" signature="862:932" ph="select recen... sid_buf" />
-                <marker date="1481961130150" expanded="true" signature="1540:1603" ph="update sid_b... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2286" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2310" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2314" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2324" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2332" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2333" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2335" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2336" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2348" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2351" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2222:2352" ph="insert into sid_buf... " />
-                <marker date="1481961130150" expanded="true" signature="2737:2811" ph="select usern... users" />
+                <marker date="1481961620723" expanded="true" signature="862:932" ph="select recen... sid_buf" />
+                <marker date="1481961620723" expanded="true" signature="1553:1616" ph="update sid_b... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2299" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2323" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2327" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2337" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2345" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2346" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2348" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2349" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2361" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2364" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2235:2365" ph="insert into sid_buf... " />
+                <marker date="1481961620723" expanded="true" signature="2750:2824" ph="select usern... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new-article.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog-dev/new-article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+            <state relative-caret-position="260">
+              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
               <folding>
                 <marker date="1481961353692" expanded="true" signature="2773:2803" ph="{...}" />
               </folding>
@@ -80,8 +90,8 @@
         <option value="$PROJECT_DIR$/blog-dev/api/del-article.php" />
         <option value="$PROJECT_DIR$/test/look_up.php" />
         <option value="$PROJECT_DIR$/blog-dev/api/login.php" />
-        <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-verification.php" />
         <option value="$PROJECT_DIR$/blog-dev/welcome.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-verification.php" />
       </list>
     </option>
   </component>
@@ -349,12 +359,12 @@
       <workItem from="1481187154646" duration="15000" />
       <workItem from="1481197998098" duration="3432000" />
       <workItem from="1481592312809" duration="3661000" />
-      <workItem from="1481958958392" duration="2412000" />
+      <workItem from="1481958958392" duration="2699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14205000" />
+    <option name="totallyTimeSpent" value="14492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -545,14 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog-dev/new-article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog-dev/api/update-article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -565,14 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-dev/api/add-article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -625,36 +619,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-verification.php">
+    <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
           <folding>
-            <marker date="1481961130150" expanded="true" signature="862:932" ph="select recen... sid_buf" />
-            <marker date="1481961130150" expanded="true" signature="1540:1603" ph="update sid_b... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2286" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2310" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2314" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2324" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2332" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2333" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2335" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2336" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2348" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2351" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2222:2352" ph="insert into sid_buf... " />
-            <marker date="1481961130150" expanded="true" signature="2737:2811" ph="select usern... users" />
+            <marker date="1481961353692" expanded="true" signature="2773:2803" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-verification.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+        <state relative-caret-position="975">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding>
-            <marker date="1481961353692" expanded="true" signature="2773:2803" ph="{...}" />
+            <marker date="1481961620723" expanded="true" signature="862:932" ph="select recen... sid_buf" />
+            <marker date="1481961620723" expanded="true" signature="1553:1616" ph="update sid_b... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2299" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2323" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2327" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2337" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2345" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2346" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2348" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2349" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2361" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2364" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2235:2365" ph="insert into sid_buf... " />
+            <marker date="1481961620723" expanded="true" signature="2750:2824" ph="select usern... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-dev/api/add-article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-dev/new-article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
