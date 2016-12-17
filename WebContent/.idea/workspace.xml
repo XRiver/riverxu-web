@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="463">
@@ -51,17 +51,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog-article-management.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="blog-article-management.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+            <state relative-caret-position="575">
+              <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
               <folding>
-                <marker date="1481968091773" expanded="true" signature="598:679" ph="insert into articles... " />
-                <marker date="1481968091773" expanded="true" signature="735:795" ph="select id fr... articles" />
-                <marker date="1481968091773" expanded="true" signature="1429:1458" ph="select id,ti... articles" />
-                <marker date="1481968091773" expanded="true" signature="2107:2151" ph="select title... articles" />
-                <marker date="1481968091773" expanded="true" signature="2809:2839" ph="delete from " />
+                <marker date="1481968528356" expanded="true" signature="598:679" ph="insert into articles... " />
+                <marker date="1481968528356" expanded="true" signature="735:795" ph="select id fr... articles" />
+                <marker date="1481968528356" expanded="true" signature="1429:1458" ph="select id,ti... articles" />
+                <marker date="1481968528356" expanded="true" signature="2124:2168" ph="select title... articles" />
+                <marker date="1481968528356" expanded="true" signature="2826:2856" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -367,12 +367,12 @@
       <workItem from="1481187154646" duration="15000" />
       <workItem from="1481197998098" duration="3432000" />
       <workItem from="1481592312809" duration="3661000" />
-      <workItem from="1481958958392" duration="8964000" />
+      <workItem from="1481958958392" duration="9361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20757000" />
+    <option name="totallyTimeSpent" value="21154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -717,20 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-          <folding>
-            <marker date="1481968091773" expanded="true" signature="598:679" ph="insert into articles... " />
-            <marker date="1481968091773" expanded="true" signature="735:795" ph="select id fr... articles" />
-            <marker date="1481968091773" expanded="true" signature="1429:1458" ph="select id,ti... articles" />
-            <marker date="1481968091773" expanded="true" signature="2107:2151" ph="select title... articles" />
-            <marker date="1481968091773" expanded="true" signature="2809:2839" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -745,6 +731,20 @@
             <marker date="1481967703291" expanded="true" signature="3003:3033" ph="{...}" />
             <marker date="1481967703291" expanded="true" signature="3042:3060" ph="{...}" />
             <marker date="1481967703291" expanded="true" signature="3273:3293" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+          <folding>
+            <marker date="1481968528356" expanded="true" signature="598:679" ph="insert into articles... " />
+            <marker date="1481968528356" expanded="true" signature="735:795" ph="select id fr... articles" />
+            <marker date="1481968528356" expanded="true" signature="1429:1458" ph="select id,ti... articles" />
+            <marker date="1481968528356" expanded="true" signature="2124:2168" ph="select title... articles" />
+            <marker date="1481968528356" expanded="true" signature="2826:2856" ph="delete from " />
           </folding>
         </state>
       </provider>
