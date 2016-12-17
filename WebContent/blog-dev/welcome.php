@@ -55,7 +55,6 @@
             $list = getArticleList();
 
             foreach ($list as $meta_article) {
-                var_dump($meta_article);
         ?>
 
         <div class="article-index-item">
