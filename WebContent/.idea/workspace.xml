@@ -31,11 +31,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog-comment-management.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+              <folding>
+                <marker date="1481961353692" expanded="true" signature="2773:2803" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog-article-management.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding>
+                <marker date="1481964889279" expanded="true" signature="590:671" ph="insert into articles... " />
+                <marker date="1481964889279" expanded="true" signature="727:787" ph="select id fr... articles" />
+                <marker date="1481964889279" expanded="true" signature="1421:1450" ph="select id,ti... articles" />
+                <marker date="1481964889279" expanded="true" signature="2036:2080" ph="select title... articles" />
+                <marker date="1481964889279" expanded="true" signature="2738:2768" ph="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/model/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog-comment-management.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-comment-management.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="600">
+              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
                 <marker date="1481963696548" expanded="true" signature="376:475" ph="insert into comments... " />
@@ -70,10 +108,10 @@
         <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/model/Comment.php" />
         <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/model/Article.php" />
         <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/model/MetaArticle.php" />
-        <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php" />
         <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-comment-management.php" />
         <option value="$PROJECT_DIR$/blog-dev/view-article.php" />
         <option value="$PROJECT_DIR$/blog-dev/api/add-comment.php" />
+        <option value="$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php" />
       </list>
     </option>
   </component>
@@ -344,12 +382,12 @@
       <workItem from="1481187154646" duration="15000" />
       <workItem from="1481197998098" duration="3432000" />
       <workItem from="1481592312809" duration="3661000" />
-      <workItem from="1481958958392" duration="5660000" />
+      <workItem from="1481958958392" duration="5895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17453000" />
+    <option name="totallyTimeSpent" value="17688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -580,16 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-          <folding>
-            <marker date="1481961353692" expanded="true" signature="2773:2803" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog-dev/api/add-article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -629,41 +657,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/model/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/model/MetaArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/model/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1550">
           <caret line="67" column="2" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <marker date="1481963444268" expanded="true" signature="590:671" ph="insert into articles... " />
-            <marker date="1481963444268" expanded="true" signature="727:787" ph="select id fr... articles" />
-            <marker date="1481963444268" expanded="true" signature="1421:1450" ph="select id,ti... articles" />
-            <marker date="1481963444268" expanded="true" signature="2030:2074" ph="select title... articles" />
-            <marker date="1481963444268" expanded="true" signature="2726:2756" ph="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,13 +697,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog-dev/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding>
+            <marker date="1481961353692" expanded="true" signature="2773:2803" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/model/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-comment-management.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="600">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
             <marker date="1481963696548" expanded="true" signature="376:475" ph="insert into comments... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/model/MetaArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/php-lib/blog/blog-article-management.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <marker date="1481964889279" expanded="true" signature="590:671" ph="insert into articles... " />
+            <marker date="1481964889279" expanded="true" signature="727:787" ph="select id fr... articles" />
+            <marker date="1481964889279" expanded="true" signature="1421:1450" ph="select id,ti... articles" />
+            <marker date="1481964889279" expanded="true" signature="2036:2080" ph="select title... articles" />
+            <marker date="1481964889279" expanded="true" signature="2738:2768" ph="delete from " />
           </folding>
         </state>
       </provider>

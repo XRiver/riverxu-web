@@ -40,7 +40,7 @@ include ($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.php"
         while ($row = mysql_fetch_row($found)) {
             $id = $row[0];
             $title = $row[1];
-            array_push($meta_array,new MetaArticle($id,$title));
+            array_push($meta_array,new \blog\MetaArticle($id,$title));
         }
 
         return $meta_array;
@@ -57,7 +57,7 @@ include ($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.php"
         if ($row = mysql_fetch_row($found)) {
             $title = $row[0];
             $content = $row[1];
-            return new Article($title,$content);
+            return new \blog\Article($title,$content);
         } else {
             return null;
         }
