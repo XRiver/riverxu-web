@@ -11,7 +11,14 @@ namespace blog;
 
 class Article {
     private $title, $content;
-    public function Article($title,$content) {
+
+    /**
+     * Article constructor.
+     * @param $title
+     * @param $content
+     */
+    public function __construct($title, $content)
+    {
         $this->title = $title;
         $this->content = $content;
     }

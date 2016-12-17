@@ -42,7 +42,6 @@ include_once($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.
             $title = $row[1];
 
             $result = new \blog\MetaArticle($id,$title);
-            var_dump($result);var_dump($title);
             array_push($meta_array,$result);
         }
 
