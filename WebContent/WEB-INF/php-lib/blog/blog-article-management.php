@@ -40,7 +40,10 @@ include_once($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.
         while ($row = mysql_fetch_row($found)) {
             $id = $row[0];
             $title = $row[1];
-            array_push($meta_array,new \blog\MetaArticle($id,$title));
+
+            $result = new \blog\MetaArticle($id,$title);
+            var_dump($result);
+            array_push($meta_array,$result);
         }
 
         return $meta_array;
