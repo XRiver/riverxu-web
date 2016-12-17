@@ -44,8 +44,8 @@
     <div id="article-index">
         <?php
             include($_SERVER["DOCUMENT_ROOT"]."/WEB-INF/php-lib/mysql.php");
-            include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog-article-management.php");
-            include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog-verification.php");
+            include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog/blog-article-management.php");
+            include($_SERVER["DOCUMENT_ROOT"] . "/WEB-INF/php-lib/blog/blog-verification.php");
             $conn = get_mysql_conn();
             select_webdb();
 
