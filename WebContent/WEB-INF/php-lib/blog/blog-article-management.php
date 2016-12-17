@@ -1,7 +1,7 @@
 <?php
 
-include ($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/Article.php");
-include ($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/Article.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.php");
 
 /* Add an article to the storage.
     Pre-condition: Conntented to the web's database. 
