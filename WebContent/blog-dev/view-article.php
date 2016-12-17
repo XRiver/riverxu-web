@@ -18,13 +18,13 @@
 
     if ($article==null) {
         echo "Cannot find article identified by '".$id."'";
-        close_mysql();
+        close_mysql($conn);
         exit;
     }
 
     $title = $article->getTitle();
     $content = $article->getContent();
-
+    close_mysql($conn);
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <title>
         <?php
-            echo $title;
+            echo htmlspecialchars($title);
         ?>
         </title>
     </head>
@@ -49,5 +49,15 @@
             ?>
             </p>
         </article>
+        <div id="add-comment">
+        <form action="api/add-comment.php" method="post">
+            <p>昵称：</p><input type="text" id="username" />
+            <p>评论内容：</p><input type="text" id="content" />
+            <input type="hidden" id="at" value="<?php echo $id;?>" />
+            <button type="submit">添加评论</button>
+        </form>
+
+        </div>
+
     </body>
 </html>

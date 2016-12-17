@@ -1,29 +1,7 @@
 <?php
 
-    class Article {
-        private $title, $content;
-        public function Article($title,$content) {
-            $this->title = $title;
-            $this->content = $content;
-        }
-
-        public function getTitle() {return $this->title;}
-        public function getContent() {return $this->content;}
-
-    }
-
-    class MetaArticle {
-        private $id, $title;
-        public function MetaArticle($id,$title) {
-            $this->id = $id;
-            $this->title = $title;
-        }
-
-        public function getId() {return $this->id;}
-        public function getTitle() {return $this->title;}
-    }
-
-
+include ($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/Article.php");
+include ($_SERVER['DOCUMENT_ROOT']."/WEB-INF/php-lib/blog/model/MetaArticle.php");
 
 /* Add an article to the storage.
     Pre-condition: Conntented to the web's database. 
