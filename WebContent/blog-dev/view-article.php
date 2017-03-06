@@ -43,11 +43,11 @@
                 echo htmlspecialchars($title);
             ?>
             </h1>
-            <p>
+            <p><pre>
             <?php
                 echo htmlspecialchars($content);
             ?>
-            </p>
+            </pre></p>
         </article>
         <div id="add-comment">
         <form action="api/add-comment.php" method="post">
